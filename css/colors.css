@@ -1,0 +1,39 @@
+body {
+    --main-color: black;
+    --main-background-color: white;
+    --border-color: #cbcccf;
+    --text-muted-color: #5f6368;
+    --shadow-color: rgb(210 210 210);
+    --overflow-color: #bfbfbf;
+    --overflow-background-color: #eaeaea;
+    --blue: #1e6ace;
+    --blue-hover: #3e89ed;
+    --blue-background: #edf5ff;
+    --gray-1: #f2f2f5;
+    --gray-2: #e4e7f4;
+    --gray-3: #ced2e8;
+    --orange: orange;
+    --orange-hover: #ffbc42;
+    --success: #27bd27;
+    --warning: #efa907;
+    --danger: #ff2424;
+}
+
+.dark-theme {
+    --main-color: white;
+    --main-background-color: #252627;
+    --border-color: #5f6368;
+    --text-muted-color: #d0d0d0;
+    --shadow-color: black;
+    --overflow-color: #3c3e42;
+    --overflow-background-color: black;
+    --blue: #5ea3ff;
+    --blue-hover: #78b2ff;
+    --blue-background: #283747;
+    --gray-1: #3c3e42;
+    --gray-2: #7d808c;
+    --gray-3: #5b5d66;
+    --success: #5ee05e;
+    --warning: #ffc339;
+    --danger: #ff5f5f;
+}

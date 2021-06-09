@@ -1,0 +1,72 @@
+/*//////////////////////////////////////////////////////////////////////////
+// BUTTON //////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////*/
+
+.btn {
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////
+// BUTTON PRIMARY //////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////*/
+
+.btn-primary {
+    border: 0px;
+    padding: 11px 24px 11px 24px;
+    color: var(--main-background-color);
+    background-color: var(--blue);
+}
+
+.btn-primary-sm {
+    padding: 7px 12px 7px 12px;
+}
+
+@media not all and (pointer: coarse) {
+    .btn-primary:hover {
+        background-color: var(--blue-hover);
+    }
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////
+// BUTTON SECONDARY ////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////*/
+
+.btn-secondary {
+    border: 1px solid var(--gray-1);
+    padding: 10px 23px 10px 23px;
+    color: var(--blue);
+    background-color: var(--main-background-color);
+}
+
+.btn-secondary-sm {
+    padding: 6px 11px 6px 11px;
+}
+
+@media not all and (pointer: coarse) {
+    .btn-secondary:hover {
+        background-color: var(--gray-1);
+    }
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////
+// BUTTON BADGE ////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////*/
+
+.btn-primary .btn-badge {
+    color: var(--main-color);
+    background-color: var(--main-background-color);
+    border-radius: 4px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 5px;
+}
