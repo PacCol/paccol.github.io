@@ -1,0 +1,48 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    border-radius: 5px;
+    background-color: var(--overflow-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--overflow-color);
+    border-radius: 5px;
+}
+
+button, a, label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    display: block;
+    margin: 0px !important;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--main-background-color);
+    overflow: auto;
+}
+
+.material-icons-round {
+    vertical-align: bottom;
+    font-size: 1.2em;
+    user-select: none;
+}
+
+button .material-icons-round {
+    margin-left: 4px;
+}
+
+.success {
+    color: var(--success);
+}
+
+.warning {
+    color: var(--warning);
+}
+
+.danger {
+    color: var(--danger);
+}

@@ -1,0 +1,56 @@
+.navbar {
+    height: 42px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    ;
+    margin-bottom: 18px;
+    user-select: none;
+}
+
+.nav-title button {
+    margin-left: 12px;
+    padding: 0px;
+    background-color: var(--main-background-color);
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-title .material-icons-round {
+    font-size: 28px;
+    color: var(--text-muted-color);
+    vertical-align: -0.235em;
+}
+
+.nav-title h1 {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 10px;
+    color: var(--text-muted-color);
+}
+
+.profile-button {
+    margin-right: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--orange);
+    transition: 0.2s;
+    line-height: 2.7em;
+    white-space: nowrap;
+}
+
+.profile-button:hover {
+    background-color: var(--orange-hover);
+}
+
+.profile-button p {
+    margin: 0px;
+    text-align: center;
+    color: var(--main-background-color);
+    font-size: 28px;
+    font-weight: bold;
+}
