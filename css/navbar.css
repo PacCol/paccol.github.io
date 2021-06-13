@@ -5,8 +5,8 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--border-color);
-    ;
     margin-bottom: 18px;
+    white-space: nowrap;
     user-select: none;
 }
 

@@ -9,6 +9,7 @@
     font-size: 13px;
     transition: background-color 0.2s;
     user-select: none;
+    white-space: nowrap;
 }
 
 
