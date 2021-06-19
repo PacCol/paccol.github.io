@@ -7,7 +7,6 @@
     padding-left: 35px;
     padding-right: 35px;
     padding-bottom: 15px;
-    display: inline-block;
     transition: width 0.3s;
     color: var(--main-color);
     width: 0px;

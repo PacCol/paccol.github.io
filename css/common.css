@@ -33,11 +33,11 @@ body {
 
 .material-icons-round {
     vertical-align: bottom;
-    font-size: 1.2em;
+    font-size: 1.25em;
     user-select: none;
 }
 
-button .material-icons-round {
+.btn .material-icons-round {
     margin-left: 4px;
 }
 

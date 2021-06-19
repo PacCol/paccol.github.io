@@ -1,13 +1,12 @@
 $(document).ready(function() {
-    var menuWidth = parseInt($(".menu").css("width").replace("px", "")) + 3 + "px";
-	console.log(menuWidth);
-	$(".app").css("width", "calc(100% - " + menuWidth + ")");
+    var menuWidth = parseInt($(".menu").css("width"));
+	$(".app").css("width", "calc(100% - " + menuWidth + "px)");
 });
 
 function open_menu() {
-	var menuWidth = parseInt($(".menu").css("width").replace("px", "")) + 3 + "px";
 	$(".nav-title button").prop("disabled", true);
-	$(".app").css("width", "calc(100% - " + menuWidth);
+	var menuWidth = parseInt($(".menu").css("width"));
+	$(".app").css("width", "calc(100% - " + menuWidth + "px)");
 	setTimeout(function() {
 		$(".menu").fadeIn(300).promise().done(function() {
 			$(".nav-title button").prop("disabled", false);

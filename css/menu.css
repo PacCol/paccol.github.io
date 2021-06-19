@@ -1,5 +1,5 @@
 .menu {
-    width: 216px;
+    width: 219px;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-right: 2px;
@@ -11,6 +11,7 @@
     user-select: none;
     margin-right: 0px;
     float: left;
+    box-sizing: border-box;
 }
 
 .menu-link {

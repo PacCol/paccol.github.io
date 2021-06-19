@@ -11,24 +11,31 @@
 }
 
 .nav-title button {
+    padding: 7px !important;
     margin-left: 12px;
     padding: 0px;
     background-color: var(--main-background-color);
     border: 0px;
     outline: none;
     cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    vertical-align: sub;
+}
+
+.nav-title button:hover {
+    background-color: var(--gray-1);
 }
 
 .nav-title .material-icons-round {
     font-size: 28px;
     color: var(--text-muted-color);
-    vertical-align: -0.235em;
 }
 
 .nav-title h1 {
-    display: inline-block;
+    display: inline;
     font-size: 18px;
-    margin-left: 10px;
+    vertical-align: initial;
     color: var(--text-muted-color);
 }
 
