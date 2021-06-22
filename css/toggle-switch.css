@@ -4,6 +4,10 @@
     height: 22px;
 }
 
+.toggle-switch input {
+    outline: none;
+}
+
 .toggle-switch .slider {
     position: absolute;
     cursor: pointer;

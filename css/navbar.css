@@ -20,7 +20,6 @@
     cursor: pointer;
     border-radius: 50%;
     transition: background-color 0.2s;
-    vertical-align: sub;
 }
 
 .nav-title button:hover {
@@ -33,10 +32,10 @@
 }
 
 .nav-title h1 {
-    display: inline;
+    display: inline-block;
     font-size: 18px;
-    vertical-align: initial;
     color: var(--text-muted-color);
+    vertical-align: -0.48em;
 }
 
 .profile-button {
