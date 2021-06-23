@@ -30,7 +30,7 @@
     padding-top: 100%;
 }
 
-.circular {
+.loader-shadow .circular {
     animation: rotate 2s linear infinite;
     height: 100%;
     transform-origin: center center;
@@ -43,7 +43,7 @@
     margin: auto;
 }
 
-.path {
+.loader-shadow .path {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
     stroke: var(--blue);
@@ -72,7 +72,7 @@
     }
 }
 
-.showbox {
+.loader-shadow .showbox {
     position: absolute;
     top: 0;
     bottom: 0;

@@ -9,9 +9,8 @@
     padding-bottom: 15px;
     transition: width 0.3s;
     color: var(--main-color);
-    width: 0px;
     box-sizing: border-box;
-    float: right;
+    flex: 1;
 }
 
 .control {

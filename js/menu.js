@@ -1,52 +1,49 @@
-$(document).ready(function() {
-    var menuWidth = parseInt($(".menu").css("width"));
-	$(".app").css("width", "calc(100% - " + menuWidth + "px)");
-});
-
-function open_menu() {
+function openMenu() {
 	$(".nav-title button").prop("disabled", true);
-	var menuWidth = parseInt($(".menu").css("width"));
-	$(".app").css("width", "calc(100% - " + menuWidth + "px)");
-	setTimeout(function() {
-		$(".menu").fadeIn(300).promise().done(function() {
+	$(".app").fadeOut(250).promise().done(function () {
+		$(".menu").show();
+		$(".app").fadeIn(250);
+		$(".menu").removeClass("closed");
+		setTimeout(function () {
 			$(".nav-title button").prop("disabled", false);
-		});
-	}, 300);
-}
-
-function close_menu() {
-	$(".nav-title button").prop("disabled", true);
-	$(".menu").fadeOut(300).promise().done(function() {
-		$(".app").css("width", "100%");
-		setTimeout(function() {
-			$(".nav-title button").prop("disabled", false);
-		}, 300);
+		}, 250);
 	});
 }
 
-$(document).ready(function() {
+function closeMenu() {
+	$(".nav-title button").prop("disabled", true);
+	$(".menu").addClass("closed");
+	$(".app").fadeOut(250).promise().done(function () {
+		$(".menu").hide();
+		$(".app").fadeIn(250).promise().done(function () {
+			$(".nav-title button").prop("disabled", false);
+		});
+	});
+}
+
+$(document).ready(function () {
 	if ($(document).innerWidth() < 700) {
-		close_menu();
+		closeMenu();
 	}
 });
-$(window).on("resize", function() {
+$(window).on("resize", function () {
 	if ($(document).innerWidth() < 700) {
-		close_menu();
+		closeMenu();
 	}
 });
 
-$(".nav-title button").click(function() {
-	if ($(".menu").css("display") == "none") {
-		open_menu();
+$(".nav-title button").click(function () {
+	if ($(".menu").hasClass("closed")) {
+		openMenu();
 	} else {
-		close_menu();
+		closeMenu();
 	}
 });
 
-$(".menu-button").click(function() {
+$(".menu-button").click(function () {
 	if ($("body").innerWidth() < 700) {
-		setTimeout(function() {
-			close_menu();
+		setTimeout(function () {
+			closeMenu();
 		}, 400);
 	}
 });

@@ -21,11 +21,11 @@
     color: var(--main-color);
 }
 
-.alert h2 {
+.alert-title {
     margin-top: 5px;
 }
 
-.alert p {
+.alert-text {
     margin-bottom: 24px;
 }
 

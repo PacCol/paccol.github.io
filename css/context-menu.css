@@ -1,4 +1,4 @@
-#context-menu {
+.context-menu {
     position: fixed;
     z-index: 10000;
     min-width: 150px;
@@ -10,12 +10,12 @@
     box-shadow: 0px 0px 8px var(--shadow-color);
 }
 
-#context-menu.visible {
+.context-menu.visible {
     transform: scaleX(1) scaleY(1);
     transition: transform 100ms ease-in-out;
 }
 
-#context-menu .item {
+.context-menu .item {
     padding: 6px 7px;
     font-size: 14px;
     font-weight: bold;
@@ -25,6 +25,6 @@
     transition: 0.2s;
 }
 
-#context-menu .item:hover {
+.context-menu .item:hover {
     background-color: var(--gray-1)
 }

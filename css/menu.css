@@ -1,5 +1,9 @@
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
 .menu {
-    width: 219px;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-right: 2px;
@@ -9,9 +13,12 @@
     border-bottom: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     user-select: none;
-    margin-right: 0px;
-    float: left;
     box-sizing: border-box;
+    transition: transform 0.25s;
+}
+
+.menu.closed {
+    transform: translateX(-100%);
 }
 
 .menu-link {
@@ -77,7 +84,6 @@
 
 #dark-theme-toggle-switch {
     float: right;
-    margin-top: -1px;
-    margin-right: 4px;
+    margin-top: -1.5px;
     margin-left: 20px;
 }
