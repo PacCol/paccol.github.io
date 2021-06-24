@@ -26,9 +26,12 @@ $(document).ready(function () {
 		closeMenu();
 	}
 });
+
 $(window).on("resize", function () {
 	if ($(document).innerWidth() < 700) {
-		closeMenu();
+		if (!$(".menu").hasClass("closed")) {
+			closeMenu();
+		}
 	}
 });
 
