@@ -1,6 +1,6 @@
 .modern-input {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 18px;
+    margin-bottom: 18px;
     letter-spacing: 0.2px;
     font-family: Arial, sans-serif;
 }
@@ -36,6 +36,7 @@
     color: var(--text-muted-color);
     background-color: var(--main-background-color);
     pointer-events: none;
+    white-space: nowrap;
     transition: 0.2s ease all;
 }
 
@@ -52,6 +53,7 @@
 
 .modern-input-sm {
     margin-top: 27px;
+    margin-bottom: 16px;
     letter-spacing: 0.2px;
     font-family: Arial, sans-serif;
 }
@@ -89,6 +91,7 @@
     color: var(--text-muted-color);
     background-color: var(--main-background-color);
     pointer-events: none;
+    white-space: nowrap;
     transition: 0.15s ease all;
 }
 

@@ -1,3 +1,9 @@
+if ($(".context-menu").length == 0) {
+    $("body").append(`
+        <div class="context-menu"></div>
+    `);
+}
+
 function normalizePosition(mouseX, mouseY) {
 
     var scope = document.getElementsByTagName("body")[0];
@@ -28,9 +34,9 @@ function normalizePosition(mouseX, mouseY) {
     };
 }
 
-function openContextMenu(items, e) {
+function openContextMenu(content, e) {
 
-    $(".context-menu").html(items);
+    $(".context-menu").html(content);
     var position = normalizePosition(e.clientX, e.clientY);
     $(".context-menu").css("top", position.normalizedY);
     $(".context-menu").css("left", position.normalizedX);
@@ -40,26 +46,22 @@ function openContextMenu(items, e) {
     }
 }
 
-$(document).on("click", function () {
-
+$(document).on("click", function() {
     if ($(".context-menu").hasClass("visible")) {
         $(".context-menu").removeClass("visible");
     }
 });
 
-$("body").contextmenu(function (e) {
+$("body").contextmenu(function(e) {
     e.preventDefault();
 });
 
 function addContextMenu(content, items) {
-
-    if ($(".context-menu").length == 0) {
-        $("body").append(`
-            <div class="context-menu"></div>
-        `);
-    }
-
-    $("body").on("contextmenu", items, function (e) {
+    $("body").on("contextmenu", items, function(e) {
         openContextMenu(content, e);
     });
+}
+
+function removeContextMenu(item) {
+    $("item").off("contextmenu");
 }

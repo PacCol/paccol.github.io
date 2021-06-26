@@ -16,7 +16,7 @@
 }
 
 .context-menu .item {
-    padding: 6px 7px;
+    padding: 7px 10px;
     font-size: 14px;
     font-weight: bold;
     color: var(--text-muted-color);
@@ -27,4 +27,8 @@
 
 .context-menu .item:hover {
     background-color: var(--gray-1)
+}
+
+.context-menu .item i {
+    width: 32px;
 }
