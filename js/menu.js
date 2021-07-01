@@ -5,15 +5,12 @@ if ($(document).innerWidth() < 700) {
 }
 
 $(window).on("resize", function() {
-    console.log($(document).innerWidth());
     if ($(document).innerWidth() < 700) {
         mobile = true;
     } else {
         mobile = false;
     }
 });
-
-console.log(mobile);
 
 $("body").append('<div class="menu-shadow"></div>');
 

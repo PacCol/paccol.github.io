@@ -14,7 +14,9 @@ function alertBox(title, text, buttons) {
     }
 
     if ($(".alert-shadow").is(":visible")) {
-        $(".alert-shadow").fadeOut(200);
+        $(".alert-shadow").fadeOut(200).promise().done(function() {
+            alertBox(title, text, buttons)
+        });
     } else {
         $(".alert-title").text(title);
         $(".alert-text").text(text);

@@ -3,6 +3,8 @@
     width: 100%;
     background-color: var(--gray-1);
     border-radius: 6px;
+    margin-top: 18px;
+    margin-bottom: 18px;
 }
 
 .progress {
