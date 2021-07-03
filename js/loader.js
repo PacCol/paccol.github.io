@@ -1,4 +1,4 @@
-function loader() {
+function loader(show) {
 
     if ($(".loader-shadow").length == 0) {
         $("body").append(`
@@ -14,9 +14,9 @@ function loader() {
         `);
     }
 
-    if ($(".loader-shadow").is(":visible")) {
-        $(".loader-shadow").fadeOut(200);
-    } else {
+    if (show) {
         $(".loader-shadow").fadeIn(200);
+    } else {
+        $(".loader-shadow").fadeOut(200);
     }
 }
