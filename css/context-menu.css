@@ -23,6 +23,7 @@
     cursor: pointer;
     border-radius: inherit;
     transition: 0.2s;
+    white-space: nowrap;
 }
 
 .context-menu .item:hover {

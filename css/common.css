@@ -13,11 +13,14 @@
     border-radius: 5px;
 }
 
-button, a, label {
+button,
+a,
+label {
     -webkit-tap-highlight-color: transparent;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -31,14 +34,16 @@ body {
 }
 
 .material-icons-round {
-    vertical-align: text-top;
-    font-size: 1.22em;
+    vertical-align: middle;
+    font-size: 1.25em;
     font-style: normal;
     user-select: none;
 }
 
-.btn .material-icons-round {
-    margin-left: 4px;
+h3,
+p,
+td {
+    vertical-align: middle;
 }
 
 .success {
