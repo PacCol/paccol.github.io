@@ -62,7 +62,7 @@ $(".menu-button").click(function() {
     if (mobile) {
         setTimeout(function() {
             closeMenu();
-        }, 150);
+        }, 300);
     }
 });
 

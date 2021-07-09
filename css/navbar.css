@@ -50,6 +50,7 @@
     margin: 0px;
     text-align: center;
     color: var(--main-background-color);
-    font-size: 28px;
+    font-size: 26px;
+    margin-top: -1px;
     font-weight: bold;
 }

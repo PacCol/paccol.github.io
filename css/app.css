@@ -42,7 +42,8 @@
     margin: 0px;
 }
 
-#sort-by, #search {
+#sort-by,
+#search {
     display: inline-block;
 }
 

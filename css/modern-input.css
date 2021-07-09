@@ -7,27 +7,24 @@
 
 .modern-input input {
     box-sizing: border-box;
+    height: 50px;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     font-size: 16px;
     outline: none;
     border-radius: 6px;
-    margin: 1px;
     border: 1px solid var(--border-color);
     color: var(--main-color);
     background-color: var(--main-background-color);
 }
 
 .modern-input input:focus {
-    margin: 0px;
+    padding: 14px;
     border: 2px solid var(--blue);
 }
 
 .modern-input p {
-    margin-top: -34px;
+    transform: translateY(-49px);
     margin-left: 10px;
     position: absolute;
     padding-left: 5px;
@@ -41,69 +38,12 @@
 }
 
 .modern-input input:focus~p {
-    margin-top: -60px;
+    transform: translateY(-73px);
     font-size: 14px;
     color: var(--blue);
 }
 
 .modern-input input:not(:placeholder-shown)~p {
-    margin-top: -60px;
+    transform: translateY(-73px);
     font-size: 14px;
-}
-
-.modern-input-sm {
-    margin-top: 27px;
-    margin-bottom: 16px;
-    letter-spacing: 0.2px;
-    font-family: Arial, sans-serif;
-}
-
-.modern-input-sm input {
-    box-sizing: border-box;
-    width: 100%;
-    height: 32px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 2px;
-    padding-right: 15px;
-    font-size: 14px;
-    outline: none;
-    margin-bottom: 1px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.modern-input-sm input:focus {
-    height: 33px;
-    margin-bottom: 0px;
-    border-bottom: 2px solid var(--blue);
-}
-
-.modern-input-sm p {
-    padding-right: 0px;
-    margin-top: -26px;
-    position: absolute;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 14px;
-    color: var(--text-muted-color);
-    background-color: var(--main-background-color);
-    pointer-events: none;
-    white-space: nowrap;
-    transition: 0.15s ease all;
-}
-
-.modern-input-sm input:focus~p {
-    margin-top: -44px;
-    font-size: 13px;
-    padding-left: 1px;
-    color: var(--blue);
-}
-
-.modern-input-sm input:not(:placeholder-shown)~p {
-    margin-top: -44px;
-    font-size: 13px;
-    padding-left: 1px;
 }

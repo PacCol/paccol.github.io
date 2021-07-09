@@ -62,6 +62,10 @@ function addContextMenu(content, items) {
     });
 }
 
-function removeContextMenu(item) {
-    $("item").off("contextmenu");
+function removeContextMenu() {
+    $("body").off("contextmenu");
+    $("body").contextmenu(function(e) {
+        e.preventDefault();
+    });
+
 }

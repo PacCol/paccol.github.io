@@ -1,0 +1,76 @@
+.diagram-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 204px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    background-color: var(--gray-1);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.diagram-container::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    content: "";
+    background-color: var(--border-color);
+    height: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.diagram-bar {
+    flex: 1;
+    position: relative;
+    min-width: 54px;
+    margin: 0px 8px 4px 8px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.diagram-bar.primary {
+    background-color: var(--blue);
+}
+
+.diagram-bar.success {
+    background-color: var(--success);
+}
+
+.diagram-bar.warning {
+    background-color: var(--warning);
+}
+
+.diagram-bar.danger {
+    background-color: var(--danger);
+}
+
+.diagram-bar::after {
+    content: attr(data-percent);
+    position: absolute;
+    height: 19px;
+    width: 42px;
+    top: 50%;
+    left: 50%;
+    margin-top: -10.5px;
+    margin-left: -23px;
+    color: var(--main-color);
+    background-color: var(--main-background-color);
+    border-radius: 4px;
+    padding: 1px 2px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.diagram-bar::before {
+    content: attr(data-name);
+    position: absolute;
+    top: calc(100% + 8px);
+    font-weight: bold;
+    color: var(--main-color);
+    text-align: center;
+    width: 100%;
+}

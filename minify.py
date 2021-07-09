@@ -2,7 +2,7 @@ import os
 import time
 import requests
 
-repeat = True
+repeat = False
 
 while True:
 
