@@ -41,27 +41,3 @@
     background-color: white;
     box-shadow: 4px 4px 8px var(--shadow-color);
 }
-
-.settings-item {
-    height: 24px;
-    border-radius: 8px;
-    background-color: var(--gray-1);
-    padding: 8px 12px;
-    transition: transform 0.2s;
-}
-
-.settings-item:active {
-    transform: scale(0.98);
-}
-
-.settings-item p {
-    font-size: 18px;
-    display: inline;
-    vertical-align: sub;
-}
-
-.settings-item .toggle-switch {
-    float: right;
-    margin-top: 2px;
-    margin-right: 2px;
-}

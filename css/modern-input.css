@@ -1,7 +1,7 @@
 .modern-input {
     margin-top: 20px;
     margin-bottom: 20px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.25px;
     font-family: Arial, sans-serif;
 }
 
@@ -16,6 +16,7 @@
     border: 1px solid var(--border-color);
     color: var(--main-color);
     background-color: var(--main-background-color);
+    transition: border-color 0.2s;
 }
 
 .modern-input input:focus {
@@ -27,14 +28,14 @@
     transform: translateY(-49px);
     margin-left: 10px;
     position: absolute;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0px 5px;
     font-size: 16px;
     color: var(--text-muted-color);
     background-color: var(--main-background-color);
+    border-radius: 5px;
     pointer-events: none;
     white-space: nowrap;
-    transition: 0.2s ease all;
+    transition: 0.2s ease;
 }
 
 .modern-input input:focus~p {

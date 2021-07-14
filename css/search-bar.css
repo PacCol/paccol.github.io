@@ -1,8 +1,6 @@
 .search-bar {
     border-radius: 8px;
     margin-bottom: auto;
-    z-index: 2;
-    width: 35%;
 }
 
 .search-bar-active {
@@ -29,8 +27,8 @@
 .search-bar form .material-icons-round {
     color: var(--text-muted-color);
     font-size: 20px;
-    margin-left: 6px;
-    margin-right: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .search-bar input {
