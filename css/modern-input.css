@@ -17,6 +17,18 @@
     color: var(--main-color);
     background-color: var(--main-background-color);
     transition: border-color 0.2s;
+    caret-color: var(--main-color);
+}
+
+.modern-input input:-webkit-autofill,
+.modern-input input:-webkit-autofill:hover,
+.modern-input input:-webkit-autofill:focus,
+.modern-input input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--main-background-color) inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--main-color) !important;
 }
 
 .modern-input input:focus {

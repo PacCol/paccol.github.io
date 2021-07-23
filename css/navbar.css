@@ -16,12 +16,16 @@
     font-size: 28px;
     color: var(--text-muted-color);
     border-radius: 50%;
-    transition: 0.1s;
+    transition: 0.15s;
 }
 
 .nav-title .material-icons-round:hover {
     background-color: var(--gray-1);
     box-shadow: 0px 0px 0px 8px var(--gray-1);
+}
+
+.nav-title .material-icons-round:active {
+    transform: scale(1.2);
 }
 
 .nav-title h3 {
@@ -32,25 +36,19 @@
 }
 
 .profile-button {
+    margin: 0px;
+    text-align: center;
+    color: var(--main-background-color);
+    font-size: 26px;
+    font-weight: bold;
     margin-right: 12px;
     width: 42px;
     height: 42px;
     border-radius: 50%;
     background-color: var(--orange);
-    transition: 0.2s;
-    line-height: 2.7em;
-    white-space: nowrap;
+    line-height: 44px;
 }
 
-.profile-button:hover {
+.profile-button .ripple {
     background-color: var(--orange-hover);
-}
-
-.profile-button p {
-    margin: 0px;
-    text-align: center;
-    color: var(--main-background-color);
-    font-size: 26px;
-    margin-top: -1px;
-    font-weight: bold;
 }

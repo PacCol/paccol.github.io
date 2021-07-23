@@ -1,66 +1,54 @@
 import os
-import time
 import requests
 
-repeat = False
+print("\n======= CSS files =======")
 
-while True:
+i = 0
 
-    print("\n======= CSS files =======")
+cssFiles = os.listdir("css/")
+cssData = ""
 
-    i = 0
+print("- Reading files: ", end="")
 
-    cssFiles = os.listdir("css/")
+while i < len(cssFiles):
+    f = open("css/" + cssFiles[i], "r")
+    cssData = cssData + f.read()
+    i += 1
 
-    cssData = ""
+print("Complete!")
 
-    print("- Reading files: ", end="")
+url = 'https://cssminifier.com/raw'
+data = {'input': cssData}
+print("- Processing request: ", end="")
+response = requests.post(url, data=data)
+print("Complete!")
 
-    while i < len(cssFiles):
-        f = open("css/" + cssFiles[i], "r")
-        cssData = cssData + f.read()
-        i += 1
+f = open("all.min.css", "w")
+f.write(response.text)
+f.close()
 
-    print("Complete!")
+print("\n======= JS files ========")
 
-    url = 'https://cssminifier.com/raw'
-    data = {'input': cssData}
-    print("- Processing request: ", end="")
-    response = requests.post(url, data=data)
-    print("Complete!")
+i = 0
 
-    f = open("all.min.css", "w")
-    f.write(response.text)
-    f.close()
+jsFiles = os.listdir("js/")
+jsData = ""
 
-    print("\n======= JS files ========")
+print("- Reading files: ", end="")
 
-    i = 0
+while i < len(jsFiles):
+    f = open("js/" + jsFiles[i], "r")
+    jsData = jsData + f.read()
+    i += 1
 
-    jsFiles = os.listdir("js/")
+print("Complete!")
 
-    jsData = ""
+url = 'https://javascript-minifier.com/raw'
+data = {'input': jsData}
+print("- Processing request: ", end="")
+response = requests.post(url, data=data)
+print("Complete!\n")
 
-    print("- Reading files: ", end="")
-
-    while i < len(jsFiles):
-        f = open("js/" + jsFiles[i], "r")
-        jsData = jsData + f.read()
-        i += 1
-
-    print("Complete!")
-
-    url = 'https://javascript-minifier.com/raw'
-    data = {'input': jsData}
-    print("- Processing request: ", end="")
-    response = requests.post(url, data=data)
-    print("Complete!\n")
-
-    f = open("all.min.js", "w")
-    f.write(response.text)
-    f.close()
-
-    if repeat == False:
-        break
-    else:
-        time.sleep(8)
+f = open("all.min.js", "w")
+f.write(response.text)
+f.close()

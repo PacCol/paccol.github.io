@@ -64,7 +64,12 @@
 
 .menu-button-active {
     color: var(--blue);
-    background-color: var(--blue-background);
+    background-color: var(--blue-background) !important;
+}
+
+.menu-button .ripple {
+    background-color: var(--blue);
+    opacity: 0.5;
 }
 
 .menu-button .material-icons-round {

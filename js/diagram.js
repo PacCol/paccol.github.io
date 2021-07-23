@@ -26,7 +26,7 @@ function createDiagram(diagram, names, colors, values) {
 
     $(diagram).css("height", (maxValue * 2 + 6) + "px");
     $(window).on("resize", function() {
-        vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-        $(diagram).css("max-width", (vw - 80) + "px")
+        vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        $(diagram).css("max-width", (vw - 80) + "px");
     });
 }

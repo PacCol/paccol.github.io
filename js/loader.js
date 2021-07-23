@@ -1,3 +1,5 @@
+var pendingRequestsNbr = 0;
+
 function loader(show) {
 
     if ($(".loader-shadow").length == 0) {
@@ -15,8 +17,14 @@ function loader(show) {
     }
 
     if (show) {
-        $(".loader-shadow").fadeIn(200);
+        pendingRequestsNbr++;
     } else {
-        $(".loader-shadow").fadeOut(200);
+        pendingRequestsNbr--;
+    }
+
+    if (pendingRequestsNbr > 0) {
+        $(".loader-shadow").fadeIn(300);
+    } else {
+        $(".loader-shadow").fadeOut(300);
     }
 }

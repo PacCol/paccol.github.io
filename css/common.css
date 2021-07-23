@@ -3,34 +3,22 @@
     height: 10px;
 }
 
-::-webkit-scrollbar-track-piece {
+ ::-webkit-scrollbar-track-piece {
     border-radius: 5px;
     background-color: var(--overflow-background-color);
 }
 
-::-webkit-scrollbar-thumb {
+ ::-webkit-scrollbar-thumb {
     background-color: var(--overflow-color);
     border-radius: 5px;
 }
 
-button,
-a,
-label {
-    -webkit-tap-highlight-color: transparent;
-}
-
-html,
 body {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    display: block;
     margin: 0px !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: var(--main-background-color);
     overflow: auto;
+    height: 100%;
 }
 
 .material-icons-round {
