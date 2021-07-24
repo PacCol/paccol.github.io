@@ -8,8 +8,9 @@
     transition: transform 0.2s;
 }
 
-.settings-item:active {
-    transform: scale(0.98);
+.settings-item .ripple {
+    background-color: var(--blue);
+    opacity: 0.5;
 }
 
 .settings-item p {
@@ -22,4 +23,25 @@
     float: right;
     margin-top: 2px;
     margin-right: 2px;
+}
+
+.settings-item button {
+    float: right;
+    margin-top: -3.5px;
+    margin-right: -7px;
+}
+
+.settings-item .modern-dropdown {
+    float: right;
+    margin-top: -3.5px;
+    margin-right: -7px;
+}
+
+.settings-item .modern-dropdown button {
+    float: none;
+    margin: 0px;
+}
+
+.settings-item .btn-badge {
+    background-color: var(--gray-1);
 }

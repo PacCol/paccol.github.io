@@ -10,7 +10,6 @@
     bottom: calc(100% + 5px);
     pointer-events: none;
     transition: 0.2s;
-    will-change: transform;
 }
 
 [data-tooltip]:before {
@@ -44,12 +43,12 @@
 }
 
 [data-tooltip]:hover:before {
-    transition-delay: 0.5s;
+    transition-delay: 0.8s;
     transform: translate(-50%, -5px) scale(1);
 }
 
 [data-tooltip]:hover:after {
-    transition-delay: 0.6s;
+    transition-delay: 0.9s;
     transition-duration: 0.2s;
     transform: translateX(-50%) scaleY(1);
 }

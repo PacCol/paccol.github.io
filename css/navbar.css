@@ -11,8 +11,8 @@
 }
 
 .nav-title .material-icons-round {
-    margin-left: 17px;
-    margin-right: 9px;
+    margin-left: 18px;
+    margin-right: 10px;
     font-size: 28px;
     color: var(--text-muted-color);
     border-radius: 50%;
@@ -46,7 +46,7 @@
     height: 42px;
     border-radius: 50%;
     background-color: var(--orange);
-    line-height: 44px;
+    line-height: 42px;
 }
 
 .profile-button .ripple {

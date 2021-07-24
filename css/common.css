@@ -18,7 +18,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--main-background-color);
     overflow: auto;
-    height: 100%;
+    min-height: 100vh;
 }
 
 .material-icons-round {
@@ -28,10 +28,17 @@ body {
     user-select: none;
 }
 
-h3,
-p,
-td {
+* {
     vertical-align: middle;
+}
+
+button .material-icons-round {
+    line-height: 0.6em;
+}
+
+a,
+label {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .success {
