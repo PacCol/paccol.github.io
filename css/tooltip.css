@@ -25,6 +25,8 @@
     background-color: rgb(72 84 91);
     color: white;
     transform: translate(-50%, -5px) scale(0.5);
+    min-width: 200px;
+    box-shadow: 0px 0px 10px var(--shadow-color);
 }
 
 [data-tooltip]:after {
@@ -43,12 +45,12 @@
 }
 
 [data-tooltip]:hover:before {
-    transition-delay: 0.8s;
+    transition-delay: 0.6s;
     transform: translate(-50%, -5px) scale(1);
 }
 
 [data-tooltip]:hover:after {
-    transition-delay: 0.9s;
+    transition-delay: 0.7s;
     transition-duration: 0.2s;
     transform: translateX(-50%) scaleY(1);
 }

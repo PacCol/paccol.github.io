@@ -9,6 +9,6 @@ $(".settings-item").click(function() {
     }
 });
 
-$(".toggle-switch").click(function(e) {
+$(".settings-item .toggle-switch").click(function(e) {
     e.stopPropagation();
 });

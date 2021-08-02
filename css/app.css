@@ -67,34 +67,3 @@
     margin-top: 0px;
     margin-bottom: 15px;
 }
-
-.editor div div {
-    border-radius: 6px;
-    padding-top: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 4px;
-    background-color: var(--gray-1);
-    margin-left: 3px;
-    border: 1px solid var(--border-color);
-    width: fit-content;
-}
-
-.editor span:not(.material-icons-round) .material-icons-round {
-    vertical-align: middle;
-}
-
-
-/*//////////////////////////////////////////////////////////////////////////////
-// VM SECTION //////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////*/
-
-#vm-container>div,
-#vm-general,
-#vm-location,
-#vm-size,
-#vm-virtualization,
-#vm-network,
-#vm-storage {
-    display: none;
-}

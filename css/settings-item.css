@@ -4,7 +4,7 @@
     height: 24px;
     border-radius: 8px;
     background-color: var(--gray-1);
-    padding: 8px 12px;
+    padding: 8px 0px 8px 12px;
     transition: transform 0.2s;
 }
 
@@ -14,27 +14,42 @@
 }
 
 .settings-item p {
-    font-size: 18px;
-    display: inline;
-    vertical-align: sub;
+    display: inline-block;
+    margin-top: 4px;
 }
 
 .settings-item .toggle-switch {
     float: right;
-    margin-top: 2px;
-    margin-right: 2px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.settings-item>.material-icons-round {
+    float: right;
+    margin-top: -5px;
+    margin-right: 4px;
+    font-size: 24px;
+    color: var(--text-muted-color);
+    border-radius: 50%;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.settings-item>.material-icons-round:hover {
+    box-shadow: 0px 0px 0px 1px var(--border-color);
+    background-color: var(--border-color);
 }
 
 .settings-item button {
     float: right;
-    margin-top: -3.5px;
-    margin-right: -7px;
+    margin-top: -3px;
+    margin-right: 6px;
 }
 
 .settings-item .modern-dropdown {
     float: right;
-    margin-top: -3.5px;
-    margin-right: -7px;
+    margin-top: -3px;
+    margin-right: 6px;
 }
 
 .settings-item .modern-dropdown button {
