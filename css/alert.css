@@ -19,6 +19,7 @@
     border-radius: 10px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
     color: var(--main-color);
+    border: 1px solid var(--border-color);
 }
 
 .alert-title {

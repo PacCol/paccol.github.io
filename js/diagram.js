@@ -1,6 +1,16 @@
 function createDiagram(diagram, names, colors, values) {
     $(diagram).empty();
 
+    if (names.length == 0) {
+        $(diagram).removeClass("diagram-container");
+        $(diagram).append('<i class="material-icons-round">visibility_off</i>');
+        return;
+    }
+
+    if (!$(diagram).hasClass("diagram-container")) {
+        $(diagram).addClass("diagram-container");
+    }
+
     var maxValue = 0;
     for (let i = 0; i < names.length; i++) {
         if (values[i] > maxValue) {

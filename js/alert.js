@@ -14,17 +14,17 @@ function alertBox(title, text, buttons) {
     }
 
     if ($(".alert-shadow").is(":visible")) {
-        $(".alert-shadow").fadeOut(200).promise().done(function() {
+        $(".alert-shadow").fadeOut(150).promise().done(function() {
             alertBox(title, text, buttons)
         });
     } else {
         $(".alert-title").text(title);
         $(".alert-text").text(text);
         $(".alert-buttons").html(buttons);
-        $(".alert-shadow").fadeIn(200);
+        $(".alert-shadow").fadeIn(150);
     }
 }
 
 $("body").on("click", ".alert-shadow .cancel", function() {
-    $(".alert-shadow").fadeOut(200);
+    $(".alert-shadow").fadeOut(150);
 });

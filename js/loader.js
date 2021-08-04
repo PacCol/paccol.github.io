@@ -1,4 +1,4 @@
-var pendingRequestsNbr = 0;
+var loaderRequested = false;
 
 function loader(show) {
 
@@ -17,14 +17,29 @@ function loader(show) {
     }
 
     if (show) {
-        pendingRequestsNbr++;
-    } else {
-        pendingRequestsNbr--;
-    }
 
-    if (pendingRequestsNbr > 0) {
-        $(".loader-shadow").fadeIn(300);
+        loaderRequested = true;
+
+        setTimeout(function() {
+            if (loaderRequested) {
+                $(".loader-shadow").fadeIn(300);
+
+                setTimeout(function() {
+                    checkLoadingState();
+                }, 600);
+
+                function checkLoadingState() {
+                    if (!loaderRequested) {
+                        $(".loader-shadow").fadeOut(300);
+                    } else {
+                        setTimeout(function() {
+                            checkLoadingState();
+                        }, 30);
+                    }
+                }
+            }
+        }, 600);
     } else {
-        $(".loader-shadow").fadeOut(300);
+        loaderRequested = false;
     }
 }
