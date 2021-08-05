@@ -3,9 +3,9 @@
 //////////////////////////////////////////////////////////////////////////////*/
 
 .app {
-    padding-top: 15px;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 15px;
     transition: width 0.3s;
     color: var(--main-color);
