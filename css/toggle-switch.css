@@ -32,7 +32,7 @@
     width: 24px;
     background-color: var(--gray-3);
     border-radius: 50%;
-    transition: 0.4s;
+    transition: transform 0.4s !important;
 }
 
 .toggle-switch input:checked+.slider:before {

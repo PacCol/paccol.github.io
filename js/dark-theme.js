@@ -7,14 +7,18 @@ $(".dark-theme-toggle-switch input").change(function() {
     if (this.checked) {
         localStorage.setItem("theme", "dark-theme");
         $(".dark-theme-toggle-switch input").prop("checked", true);
-        $("body").hide();
+        $("body").addClass("during-transition");
         $("body").addClass("dark-theme");
-        $("body").fadeIn(500);
+        setTimeout(function() {
+            $("body").removeClass("during-transition");
+        }, 200);
     } else {
         localStorage.setItem("theme", "light-theme");
         $(".dark-theme-toggle-switch input").prop("checked", false);
-        $("body").hide();
+        $("body").addClass("during-transition");
         $("body").removeClass("dark-theme");
-        $("body").fadeIn(500);
+        setTimeout(function() {
+            $("body").removeClass("during-transition");
+        }, 200);
     }
 });
