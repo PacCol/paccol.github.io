@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="css/app.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/agate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
 
     <script src="../jquery.min.js "></script>
@@ -87,7 +87,7 @@
             </div>
 
             <div class="menu-button ripple-effect" id="alert-button">
-                <i class="material-icons-round">info</i>
+                <i class="material-icons-round">campaign</i>
                 <p>Alert</p>
             </div>
 
@@ -197,8 +197,6 @@
                     <h1>Navbar</h1>
                 </div>
 
-                <h3>Basic navbar</h3>
-
                 <pre><code class="language-html">
 &#60;div class="navbar"&#62;
 
@@ -219,6 +217,10 @@
     &#60;/div&#62;
 
     &#60;p class="profile-button ripple-effect"&#62;U&#60;/p&#62;
+&#60;/div&#62;
+
+&#60;div class="app"&#62;
+    &#60;!-- Put here the rest of your app --&#62;
 &#60;/div&#62;
                 </code></pre>
 
@@ -315,9 +317,58 @@ $("#search-bar input").keyup(function() {
                 <div class="control">
                     <h1>Menu</h1>
                 </div>
+
+                <p>You can't use a menu without navbar</p>
                 <pre><code class="language-html">
-&#60;button class="btn btn-primary"&#62;Sample button&#60;/button&#62;
-&#60;button class="btn btn-primary btn-primary-sm"&#62;Sample button&#60;/button&#62;
+&#60;div class="navbar"&#62;
+    &#60;!-- Navbar code --&#62;
+&#60;/div&#62;
+
+&#60;div class="main-container"&#62;
+
+    &#60;div class="menu"&#62;
+
+        &#60;!-- For small screen devices only --&#62;
+        &#60;div class="menu-title"&#62;
+            &#60;h3&#62;App title&#60;/h3&#62;
+            &#60;i class="material-icons-round close-menu"&#62;close&#60;/i&#62;
+        &#60;/div&#62;
+        
+        &#60;div class="menu-button ripple-effect"&#62;
+            &#60;i class="material-icons-round"&#62;icon_name&#60;/i&#62;
+            &#60;p&#62;Section title&#60;/p&#62;
+        &#60;/div&#62;
+
+        &#60;div class="menu-button ripple-effect"&#62;
+            &#60;i class="material-icons-round"&#62;icon_name&#60;/i&#62;
+            &#60;p&#62;Section title&#60;/p&#62;
+        &#60;/div&#62;
+
+        &#60;hr class="divider"&#62;
+
+        &#60;div class="menu-button"&#62;
+            &#60;i class="material-icons-round"&#62;icon_name&#60;/i&#62;
+            &#60;p&#62;State&#60;/p&#62;
+        &#60;/div&#62;
+
+        &#60;hr class="divider"&#62;
+        
+        &#60;div class="menu-button"&#62;
+            &#60;i class="material-icons-round"&#62;dark_mode&#60;/i&#62;
+            &#60;p&#62;Dark mode&#60;/p&#62;
+            &#60;label class="toggle-switch dark-theme-toggle-switch"&#62;
+                &#60;input type="checkbox"&#62;
+                &#60;span class="slider"&#62;&#60;/span&#62;
+            &#60;/label&#62;
+        &#60;/div&#62;
+        
+    &#60;/div&#62;
+
+    &#60;div class="app"&#62;
+        &#60;!-- Put here the rest of your app --&#62;
+    &#60;/div&#62;
+
+&#60;/div&#62;
                 </code></pre>
             </div>
 
@@ -325,6 +376,7 @@ $("#search-bar input").keyup(function() {
                 <div class="control">
                     <h1>Colors</h1>
                 </div>
+                <p>Not available...</p>
             </div>
 
             <div id="buttons">
@@ -472,15 +524,73 @@ setTimeout(function() {
                     <h1>Progress bar</h1>
                 </div>
 
+                <p>To create a progress bar use the following code.</p>
+
+                <pre><code class="language-html">
+&#60;div class="progress-bar"&#62;
+    &#60;div class="progress"&#62;&#60;/div&#62;
+&#60;/div&#62;
+
+&#60;button class="btn btn-primary ripple-effect" onclick="progress();"&#62;Progress&#60;/button&#62;
+                </code></pre>
+
+                <p>Now to display the percentage use this script.</p>
+
+                <pre><code class="language-js">
+function progress() {
+    var percentage = Math.floor(Math.random() * 100);
+    $(".progress").css("width", percentage + "%");
+}
+                </code></pre>
+
                 <div class="progress-bar">
                     <div class="progress"></div>
                 </div>
+
+                <button class="btn btn-primary ripple-effect" onclick="progress();">Progress</button>
+
+                <script>
+                    function progress() {
+                        var percentage = Math.floor(Math.random() * 100);
+                        $(".progress").css("width", percentage + "%");
+                    }
+                </script>
             </div>
 
             <div id="alert">
                 <div class="control">
                     <h1>Alert</h1>
                 </div>
+
+                <p>To open an alert box, give the alert title, the alert content (text only) and the alert actions (buttons, inputs)</p>
+
+                <p>Add the class .cancel to a button to make it close the alert box.</p>
+
+                <pre><code class="language-js">
+alertBox("Alert title", "Alert content", `
+    &#60;button class="btn btn-secondary ripple-effect"&#62;Example&#60;/button&#62;
+    &#60;button class="btn btn-primary btn-align-right ripple-effect cancel"&#62;Close&#60;/button&#62;
+`);
+                </code></pre>
+
+                <button class="btn btn-primary ripple-effect" onclick="demoAlert();">Alert</button>
+
+                <script>
+                    function demoAlert() {
+                        alertBox("Alert title", "Alert content", `
+                            <button class="btn btn-secondary ripple-effect">Example</button>
+                            <button class="btn btn-primary btn-align-right ripple-effect cancel">Close</button>`);
+                    }
+                </script>
+
+                <p>If you want to put only right aligned buttons in the alert box, add a clear div like this.</p>
+
+                <pre><code class="language-js">
+alertBox("Alert title", "Alert content", `
+    &#60;button class="btn btn-primary btn-align-right ripple-effect cancel"&#62;Close&#60;/button&#62;
+    &#60;div style="clear: both&#62;&#60;/div&#62;
+`);
+                </code></pre>
             </div>
 
             <div id="tooltip">
