@@ -7,6 +7,16 @@
     border-bottom: 1px solid var(--border-color);
     white-space: nowrap;
     user-select: none;
+    position: sticky;
+    top: 0px;
+    background-color: var(--main-background-color);
+    z-index: 2;
+}
+
+@media (max-width: 699px) {
+    .navbar {
+        z-index: 0;
+    }
 }
 
 .nav-title .material-icons-round {

@@ -9,7 +9,6 @@
     padding-bottom: 15px;
     transition: width 0.3s;
     color: var(--main-color);
-    box-sizing: border-box;
     flex: 1;
 }
 
@@ -28,42 +27,6 @@
     font-size: 22px;
 }
 
-.page-control {
-    display: flex;
-    justify-content: space-between;
-    user-select: none;
-    height: 30px;
-    white-space: nowrap;
-}
-
-#previous .material-icons-round,
-#next .material-icons-round,
-#search .material-icons-round {
-    margin: 0px;
-}
-
-#sort-by,
-#search {
-    display: inline-block;
-}
-
-#collection {
-    margin-top: 8px;
-    padding-bottom: 20px;
-    padding-bottom: 0px;
-}
-
-.filter {
-    display: none;
-}
-
-.editor h4 {
-    font-size: 17px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.editor p {
-    margin-top: 0px;
-    margin-bottom: 15px;
+.app h3 {
+    margin-top: 45px;
 }

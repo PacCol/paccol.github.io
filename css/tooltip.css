@@ -10,6 +10,7 @@
     bottom: calc(100% + 5px);
     pointer-events: none;
     transition: 0.2s;
+    z-index: 3;
 }
 
 [data-tooltip]:before {
@@ -25,7 +26,6 @@
     background-color: rgb(72, 84, 91);
     color: white;
     transform: translate(-50%, -5px) scale(0.5);
-    box-shadow: 0px 0px 10px var(--shadow-color);
 }
 
 [data-tooltip]:after {

@@ -9,6 +9,7 @@
 
 .modern-dropdown {
     position: relative;
+    width: fit-content;
 }
 
 .dropdown-content {

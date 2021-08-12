@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RealCSS Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="../fonts/material-design-icons/material-design-icons-round.css">
+
+    <link rel="stylesheet" href="../fonts/montserrat/montserrat.css">
+
+    <link rel="stylesheet" href="../all.min.css">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+
+    <script src="../jquery.min.js "></script>
+
+</head>
+
+<body onload='$("body").css("opacity", "1");'>
+
+    <div class="navbar">
+
+        <div class="nav-title">
+            <i class="material-icons-round open-menu">menu</i>
+            <h3>RealCSS</h3>
+        </div>
+
+    </div>
+
+    <div class="main-container">
+
+        <div class="menu">
+
+            <div class="menu-title">
+                <h3>RealCSS</h3>
+                <i class="material-icons-round close-menu">close</i>
+            </div>
+
+            <div class="menu-button ripple-effect" id="start-button">
+                <i class="material-icons-round">play_arrow</i>
+                <p>Start</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="app-button">
+                <i class="material-icons-round">grid_view</i>
+                <p>App</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="navbar-button">
+                <i class="material-icons-round">mouse</i>
+                <p>Navbar</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="menu-button">
+                <i class="material-icons-round">menu</i>
+                <p>Menu</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="colors-button">
+                <i class="material-icons-round">palette</i>
+                <p>Colors</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="buttons-button">
+                <i class="material-icons-round">touch_app</i>
+                <p>Buttons</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="inputs-button">
+                <i class="material-icons-round">keyboard</i>
+                <p>Inputs</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="loader-button">
+                <i class="material-icons-round">hourglass_empty</i>
+                <p>Loader</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="progress-bar-button">
+                <i class="material-icons-round">pending</i>
+                <p>Progress bar</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="alert-button">
+                <i class="material-icons-round">info</i>
+                <p>Alert</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="tooltip-button">
+                <i class="material-icons-round">help</i>
+                <p>Tooltip</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="context-menu-button">
+                <i class="material-icons-round">ads_click</i>
+                <p>Context menu</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="table-button">
+                <i class="material-icons-round">table_view</i>
+                <p>Table</p>
+            </div>
+
+            <div class="menu-button ripple-effect" id="diagram-button">
+                <i class="material-icons-round">trending_up</i>
+                <p>Diagram</p>
+            </div>
+
+            <hr class="divider">
+
+            <div class="menu-button">
+                <i class="material-icons-round">dark_mode</i>
+                <p>Dark mode</p>
+                <label class="toggle-switch dark-theme-toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="app">
+
+            <div id="start">
+                <div class="control">
+                    <h1>Start</h1>
+                </div>
+
+                <p>Download RealCSS and put the directory in the right folder.</p>
+
+                <pre><code class="language-plaintext">
+-> static
+    -> css
+    -> js
+    -> RealCSS
+    -> index.html
+                </code></pre>
+
+                <p>After that, just add the css and js core to your page. We also add Montserrat and Material icons.</p>
+
+                <pre><code class="language-html">
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+
+&#60;head&#62;
+    &#60;title&#62;RealCSS Example&#60;/title&#62;
+    &#60;meta charset="UTF-8"&#62;
+    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&#62;
+        
+    &#60;link rel="stylesheet" href="path_to_RealCSS/fonts/material-design-icons/material-design-icons-round.css"&#62;
+    &#60;link rel="stylesheet" href="path_to_RealCSS/fonts/montserrat/montserrat.css"&#62;
+
+    &#60;link rel="stylesheet" href="path_to_RealCSS/all.min.css"&#62;
+&#60;/head&#62;
+
+&#60;body&#62;
+
+    &#60;!-- your code here --&#62;
+
+    &#60;script src="path_to_RealCSS/jquery.min.js "&#62;&#60;/script&#62;
+    &#60;script src="path_to_RealCSS/all.min.js "&#62;&#60;/script&#62;
+    
+&#60;/body&#62;
+
+&#60;/html&#62;
+                </code></pre>
+            </div>
+
+            <div id="app">
+                <div class="control">
+                    <h1>App</h1>
+                </div>
+
+                <p>This is the how you must use the library to create each section. Each section can be contained in a div with a specific id.</p>
+
+                <div class="control">
+                    <h1>Section title</h1>
+
+                    <div>
+                        <button class="btn btn-primary btn-primary-sm ripple-effect">sample button</button>
+                    </div>
+                </div>
+
+                <pre>
+&lt;div class="control"&gt;
+    &lt;h1&gt;App&lt;/h1&gt;
+&lt;/div&gt;
+                </pre>
+            </div>
+
+            <div id="navbar">
+                <div class="control">
+                    <h1>Navbar</h1>
+                </div>
+
+                <h3>Basic navbar</h3>
+
+                <pre><code class="language-html">
+&#60;div class="navbar"&#62;
+
+    &#60;div class="nav-title"&#62;
+        &#60;i class="material-icons-round open-menu"&#62;menu&#60;/i&#62;
+        &#60;h3&#62;App title&#60;/h3&#62;
+    &#60;/div&#62;
+
+    &#60;div id="search-bar" class="search-bar"&#62;
+        &#60;div class="search-field"&#62;
+            &#60;span class="material-icons-round"&#62;search&#60;/span&#62;
+            &#60;input type="text" placeholder="Search something..."&#62;
+            &#60;span class="material-icons-round"&#62;expand_more&#60;/span&#62;
+        &#60;/div&#62;
+        &#60;div id="search-list" class="search-list"&#62;
+            &#60;hr class="divider"&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+
+    &#60;p class="profile-button ripple-effect"&#62;U&#60;/p&#62;
+&#60;/div&#62;
+                </code></pre>
+
+                <p>If you wan't to know how to use the search bar, you can use this script.</p>
+
+                <pre><code class="language-js">
+$("#search-bar input").keyup(function() {
+    let val = $("#search-bar input").val();
+
+    if (val == "") {
+        $("#search-list").hide();
+        return;
+    }
+
+    // Replace with a request
+    // Search results with the input value
+    // For simulation, we will use theses values
+    var results = ["result 1", "result 2"];
+
+    $("#search-list a").remove();
+
+    if (results.length != 0) {
+        $("#search-list").show();
+
+        for (var i = 0; i < results.length; i++) {
+            $("#search-list").append(`
+                &#60;a href="#"&#62;${results[i]}&#60;/a&#62;
+            `);
+        }
+
+    } else {
+        $("#search-list").hide();
+    }
+});
+
+                </code></pre>
+
+                <p>Don't forget to use media queries to hide the search bar there is not enough place to fit it.</p>
+
+                <div class="navbar">
+
+                    <div class="nav-title">
+                        <i class="material-icons-round open-menu">menu</i>
+                        <h3>App title</h3>
+                    </div>
+
+                    <div id="search-bar" class="search-bar">
+                        <div class="search-field">
+                            <span class="material-icons-round">search</span>
+                            <input type="text" placeholder="Search something...">
+                            <span class="material-icons-round">expand_more</span>
+                        </div>
+                        <div id="search-list" class="search-list">
+                            <hr class="divider">
+                        </div>
+                    </div>
+
+                    <p class="profile-button ripple-effect">U</p>
+
+                </div>
+
+                <script>
+                    $(document).ready(function() {
+                        $("#search-bar input").keyup(function() {
+                            let val = $("#search-bar input").val();
+                            if (val == "") {
+                                $("#search-list").hide();
+                                return;
+                            }
+
+                            var results = ["result 1", "result 2"];
+
+                            $("#search-list a").remove();
+
+                            if (results.length != 0) {
+                                $("#search-list").show();
+
+                                for (var i = 0; i < results.length; i++) {
+                                    $("#search-list").append(`
+                                        <a href="#">${results[i]}</a>
+                                    `);
+                                }
+
+                            } else {
+                                $("#search-list").hide();
+                            }
+
+                        });
+                    });
+                </script>
+            </div>
+
+            <div id="menu">
+                <div class="control">
+                    <h1>Menu</h1>
+                </div>
+                <pre><code class="language-html">
+&#60;button class="btn btn-primary"&#62;Sample button&#60;/button&#62;
+&#60;button class="btn btn-primary btn-primary-sm"&#62;Sample button&#60;/button&#62;
+                </code></pre>
+            </div>
+
+            <div id="colors">
+                <div class="control">
+                    <h1>Colors</h1>
+                </div>
+            </div>
+
+            <div id="buttons">
+                <div class="control">
+                    <h1>Buttons</h1>
+                </div>
+
+                <h3>Primary Button</h3>
+                <pre><code class="language-html">
+&#60;button class="btn btn-primary"&#62;Sample button&#60;/button&#62;
+&#60;button class="btn btn-primary btn-primary-sm"&#62;Sample button&#60;/button&#62;
+                </code></pre>
+                <button class="btn btn-primary">Sample button</button>
+                <button class="btn btn-primary btn-primary-sm">Sample button</button>
+
+                <h3>Secondary Button</h3>
+                <pre><code class="language-html">
+&#60;button class="btn btn-secondary"&#62;Sample button&#60;/button&#62;
+&#60;button class="btn btn-secondary btn-secondary-sm"&#62;Sample button&#60;/button&#62;
+                </code></pre>
+                <button class="btn btn-secondary">Sample button</button>
+                <button class="btn btn-secondary btn-secondary-sm">Sample button</button>
+
+                <h3>Ripple effect</h3>
+                <p>Just add the class "ripple-effect".</p>
+                <pre><code class="language-html">
+&#60;button class="btn btn-primary ripple-effect"&#62;Sample button&#60;/button&#62;
+&#60;button class="btn btn-secondary ripple-effect"&#62;Sample button&#60;/button&#62;
+                </code></pre>
+                <button class="btn btn-primary ripple-effect">Sample button</button>
+                <button class="btn btn-secondary ripple-effect">Sample button</button>
+
+                <h3>Dropdown</h3>
+                <pre><code class="language-html">
+&#60;div class="modern-dropdown"&#62;
+    &#60;button class="btn btn-primary btn-primary-sm ripple-effect"&#62;
+        Value&#60;i class="material-icons-round"&#62;expand_more&#60;/i&#62;
+    &#60;/button&#62;
+    &#60;div class="dropdown-content"&#62;
+        &#60;button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="1"&#62;1&#60;/button&#62;
+        &#60;button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="2"&#62;2&#60;/button&#62;
+        &#60;button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="3"&#62;3&#60;/button&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+                </code></pre>
+
+                <div class="modern-dropdown">
+                    <button class="btn btn-primary ripple-effect">
+                        Value<i class="material-icons-round">expand_more</i>
+                    </button>
+                    <div class="dropdown-content">
+                        <button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="1">1</button>
+                        <button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="2">2</button>
+                        <button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="3">3</button>
+                    </div>
+                </div>
+
+                <h3>Badge</h3>
+
+                <p>You cannot add a badge on a secondary button.</p>
+
+                <pre><code class="language-html">
+&#60;button class="btn btn-primary ripple-effect"&#62;
+    Sample button&#60;span class="btn-badge"&#62;Some text&#60;/span&#62;
+&#60;/button&#62;
+                </code></pre>
+
+                <button class="btn btn-primary ripple-effect">
+                    Sample button<span class="btn-badge">Some text</span>
+                </button>
+
+            </div>
+
+            <div id="inputs">
+                <div class="control">
+                    <h1>Inputs</h1>
+                </div>
+
+                <h3>Text input</h3>
+
+                <pre><code class="language-html">
+&#60;div class="modern-input"&#62;
+    &#60;input type="text" placeholder=" " autocomplete="off"&#62;
+    &#60;p&#62;Enter some text&#60;/p&#62;
+&#60;/div&#62;
+                </code></pre>
+
+                <div class="modern-input">
+                    <input type="text" placeholder=" " autocomplete="off">
+                    <p>Enter some text</p>
+                </div>
+
+                <h3>Toggle switch</h3>
+
+                <pre><code class="language-html">
+&#60;label class="toggle-switch"&#62;
+    &#60;input type="checkbox"&#62;
+    &#60;span class="slider"&#62;&#60;/span&#62;
+&#60;/label&#62;
+                </code></pre>
+
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+
+                <p>You can control the dark theme with it.</p>
+
+                <pre><code class="language-html">
+&#60;label class="toggle-switch dark-theme-toggle-switch"&#62;
+    &#60;input type="checkbox"&#62;
+    &#60;span class="slider"&#62;&#60;/span&#62;
+&#60;/label&#62;
+                </code></pre>
+
+                <label class="toggle-switch dark-theme-toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+            <div id="loader">
+                <div class="control">
+                    <h1>Loader</h1>
+                </div>
+                <p>To show the loader, use the function loader.</p>
+
+                <pre><code class="language-js">
+loader(true);
+setTimeout(function() {
+    loader(false);
+}, 4000);
+                </code></pre>
+
+                <button class="btn btn-primary ripple-effect" onclick="loader(true); setTimeout(function() { loader(false); }, 4000);">Loader</button>
+
+                <p>The loader will start to spin after 0.6 second if you don't use loader(false);</p>
+                <p>So if the loading process is very fast, the loader will not be shown.</p>
+                <p>The loader will spin at least 1 second.</p>
+            </div>
+
+            <div id="progress-bar">
+                <div class="control">
+                    <h1>Progress bar</h1>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <div id="alert">
+                <div class="control">
+                    <h1>Alert</h1>
+                </div>
+            </div>
+
+            <div id="tooltip">
+                <div class="control">
+                    <h1>Tooltip</h1>
+                </div>
+
+                <p>Just set the data-tooltip attribut to add a tooltip on an element.</p>
+                <p>Hover the button to show the tooltip.</p>
+
+                <pre><code class="language-html">
+&#60;button class="btn btn-primary" data-tooltip="Tooltip"&#62;Hover me&#60;/button&#62;
+                </code></pre>
+
+                <button class="btn btn-primary" data-tooltip="Tooltip">Hover me</button>
+
+                <p>You cannot add a tooltip on a .ripple-effect element.</p>
+            </div>
+
+            <div id="context-menu">
+                <div class="control">
+                    <h1>Context menu</h1>
+                </div>
+            </div>
+
+            <div id="table">
+                <div class="control">
+                    <h1>Table</h1>
+                </div>
+            </div>
+
+            <div id="diagram">
+                <div class="control">
+                    <h1>Diagram</h1>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../all.min.js "></script>
+
+    <script src="js/menu.js "></script>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

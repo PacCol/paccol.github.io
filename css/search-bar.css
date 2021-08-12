@@ -1,13 +1,16 @@
 .search-bar {
     border-radius: 8px;
     margin-bottom: auto;
+    flex: 1;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .search-bar-active {
-    box-shadow: 0px 0px 8px var(--shadow-color);
+    box-shadow: 0px 0px 8px 2px var(--shadow-color);
 }
 
-.search-bar form {
+.search-bar .search-field {
     box-sizing: border-box;
     display: flex;
     border-radius: 8px;
@@ -20,11 +23,11 @@
     transition: 0.2s;
 }
 
-.search-bar-active form {
+.search-bar-active .search-field {
     background-color: var(--main-background-color) !important;
 }
 
-.search-bar form .material-icons-round {
+.search-bar .search-field .material-icons-round {
     color: var(--text-muted-color);
     font-size: 20px;
     margin-left: 5px;

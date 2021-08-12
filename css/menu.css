@@ -6,13 +6,15 @@
 
 .menu {
     padding-top: 20px;
+    padding-bottom: 4px;
     padding-right: 2px;
     border-right: 1px solid var(--border-color);
     background-color: var(--main-background-color);
+    overflow-y: auto;
     user-select: none;
-    box-sizing: border-box;
     transition: transform 0.25s;
     z-index: 1;
+    flex-shrink: 0;
 }
 
 @media (max-width: 699px) {
@@ -120,7 +122,7 @@
     height: 10px;
     width: 10px;
     float: right;
-    margin: 3px 0px 3px 10px;
+    margin: 3px 0px 3px 30px;
     border: 1px solid var(--border-color);
     border-radius: 50%;
 }
@@ -133,7 +135,7 @@
     background-color: var(--danger);
 }
 
-.toggle-switch {
+.menu .toggle-switch {
     float: right;
-    margin-left: 20px;
+    margin-left: 30px;
 }

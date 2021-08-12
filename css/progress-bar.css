@@ -12,4 +12,5 @@
     transition: width 0.8s;
     background-color: var(--blue);
     border-radius: 6px;
+    width: 0%;
 }

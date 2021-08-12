@@ -1,0 +1,33 @@
+body {
+    opacity: 0;
+}
+
+.menu {
+    flex-basis: 254px;
+    width: 254px;
+}
+
+.app>div {
+    display: none;
+}
+
+pre {
+    box-sizing: border-box;
+    word-break: break-all;
+    white-space: break-spaces;
+}
+
+pre code {
+    padding: 0px 20px !important;
+    border-radius: 8px;
+}
+
+.app .navbar {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 70px;
+}
+
+.app .navbar h3 {
+    margin: 10px 0px;
+}

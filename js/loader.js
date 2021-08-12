@@ -26,7 +26,7 @@ function loader(show) {
 
                 setTimeout(function() {
                     checkLoadingState();
-                }, 600);
+                }, 1000);
 
                 function checkLoadingState() {
                     if (!loaderRequested) {
