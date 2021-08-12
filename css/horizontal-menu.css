@@ -2,6 +2,8 @@
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 25px;
     user-select: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .horizontal-menu button {
@@ -11,9 +13,9 @@
     outline: none;
     border: 0px;
     font-size: 14px;
-    padding-top: 14px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: 13px;
+    padding-left: 11px;
+    padding-right: 11px;
     padding-bottom: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -24,8 +26,8 @@
 .horizontal-menu button::after {
     position: absolute;
     bottom: 0px;
-    left: 10px;
-    right: 10px;
+    left: 8px;
+    right: 8px;
     content: "";
     background-color: transparent;
     height: 4px;
@@ -54,5 +56,5 @@
 }
 
 .horizontal-menu .align-right {
-    float: right;
+    margin-left: auto;
 }

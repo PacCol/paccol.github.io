@@ -5,11 +5,11 @@ if ($(document).innerWidth() < 700) {
 }
 
 $(window).on("resize", function() {
-    if ($(".menu").is(":visible")) {
+    /*if ($(".menu").is(":visible")) {
         if (!mobile) {
             closeMenu();
         }
-    }
+    }*/
     if ($(document).innerWidth() < 700) {
         mobile = true;
     } else {
