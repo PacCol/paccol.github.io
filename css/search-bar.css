@@ -1,9 +1,7 @@
 .search-bar {
     border-radius: 8px;
     margin-bottom: auto;
-    flex: 1;
-    margin-left: 10%;
-    margin-right: 10%;
+    flex: 0.6;
 }
 
 .search-bar-active {
@@ -80,7 +78,7 @@
     border-radius: 8px;
     transition: 0.2s;
     font-size: 14px;
-    word-wrap: break-word;
+    white-space: break-spaces;
 }
 
 .search-list a:hover {

@@ -17,7 +17,7 @@ body {
     margin: 0px !important;
     font-family: "Montserrat", sans-serif;
     background-color: var(--main-background-color);
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .during-transition,

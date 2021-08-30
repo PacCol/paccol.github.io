@@ -1,11 +1,8 @@
-/*//////////////////////////////////////////////////////////////////////////////
-// COMMON //////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////*/
-
 .app {
-    padding-top: 24px;
-    padding-left: 30px;
-    padding-right: 30px;
+    overflow-x: auto;
+    padding-top: 26px;
+    padding-left: 32px;
+    padding-right: 32px;
     padding-bottom: 15px;
     transition: width 0.3s;
     color: var(--main-color);
@@ -15,7 +12,7 @@
 .control {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 42px;
+    margin-bottom: 62px;
     user-select: none;
     white-space: nowrap;
 }

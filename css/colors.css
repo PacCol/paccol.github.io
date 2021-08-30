@@ -3,12 +3,12 @@ body {
     --main-background-color: white;
     --border-color: #cbcccf;
     --text-muted-color: #5f6368;
-    --shadow-color: rgb(210 210 210);
+    --shadow-color: rgba(0, 0, 0, 0.3);
     --overflow-color: #bfbfbf;
     --overflow-background-color: #eaeaea;
     --blue: #1e6ace;
     --blue-hover: #3e89ed;
-    --blue-background: #e9f3ff;
+    --blue-background: #e1efff;
     --gray-1: #f2f2f5;
     --gray-2: #e4e7f4;
     --gray-3: #ced2e8;
@@ -21,9 +21,9 @@ body {
 
 .dark-theme {
     --main-color: white;
-    --main-background-color: #252627;
+    --main-background-color: #1c1d1e;
     --border-color: #5f6368;
-    --text-muted-color: #d0d0d0;
+    --text-muted-color: #dddddd;
     --shadow-color: black;
     --overflow-color: #3c3e42;
     --overflow-background-color: black;

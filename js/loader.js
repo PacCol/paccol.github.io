@@ -1,4 +1,5 @@
-var loaderRequested = false;
+var loaderDelay = 600;
+var loaderRequestNbr = 0;
 
 function loader(show) {
 
@@ -18,10 +19,14 @@ function loader(show) {
 
     if (show) {
 
-        loaderRequested = true;
+        loggingFunction("LOADER REQUESTED   ");
+        loaderRequestNbr++;
 
         setTimeout(function() {
-            if (loaderRequested) {
+            if (loaderRequestNbr > 0) {
+
+                loggingFunction("LOADER SHOWN       ");
+
                 $(".loader-shadow").fadeIn(300);
 
                 setTimeout(function() {
@@ -29,8 +34,9 @@ function loader(show) {
                 }, 1000);
 
                 function checkLoadingState() {
-                    if (!loaderRequested) {
+                    if (loaderRequestNbr == 0) {
                         $(".loader-shadow").fadeOut(300);
+                        loggingFunction("LOADER HIDDEN");
                     } else {
                         setTimeout(function() {
                             checkLoadingState();
@@ -38,8 +44,14 @@ function loader(show) {
                     }
                 }
             }
-        }, 600);
+        }, loaderDelay);
     } else {
-        loaderRequested = false;
+        loaderRequestNbr--;
+        loggingFunction("LOADER HIDE REQUEST");
     }
+}
+
+function loggingFunction(msg) {
+    var now = new Date();
+    //console.log("LOADER MSG: " + msg + "       TIME: " + now.getSeconds() + ":" + now.getMilliseconds() + "               Loader Request Nbr: " + loaderRequestNbr);
 }

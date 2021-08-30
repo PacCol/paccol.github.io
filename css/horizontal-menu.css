@@ -13,10 +13,10 @@
     outline: none;
     border: 0px;
     font-size: 14px;
-    padding-top: 13px;
-    padding-left: 11px;
-    padding-right: 11px;
-    padding-bottom: 12px;
+    padding-top: 14px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     border-radius: 8px;
@@ -44,7 +44,7 @@
 
 .horizontal-menu .ripple {
     background-color: var(--blue);
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .horizontal-menu .button-active {
