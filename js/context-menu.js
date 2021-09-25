@@ -1,13 +1,7 @@
-if ($(".context-menu").length == 0) {
-    $("body").append(`
-        <div class="context-menu"></div>
-    `);
-}
-
-function normalizePosition(mouseX, mouseY) {
+function normalizePosition(mouseX, mouseY, width, height) {
 
     var scope = document.getElementsByTagName("body")[0];
-    var contextMenu = document.getElementsByClassName("context-menu")[0];
+
     const {
         left: scopeOffsetX,
         top: scopeOffsetY,
@@ -15,18 +9,18 @@ function normalizePosition(mouseX, mouseY) {
     const scopeX = mouseX - scopeOffsetX;
     const scopeY = mouseY - scopeOffsetY;
     const outOfBoundsOnX =
-        scopeX + contextMenu.clientWidth - 4 > scope.clientWidth;
+        scopeX + width - 4 > scope.clientWidth;
     const outOfBoundsOnY =
-        scopeY + contextMenu.clientHeight - 4 > scope.clientHeight;
+        scopeY + height - 4 > scope.clientHeight;
     let normalizedX = mouseX;
     let normalizedY = mouseY;
     if (outOfBoundsOnX) {
         normalizedX =
-            scopeOffsetX + scope.clientWidth - contextMenu.clientWidth - 4;
+            scopeOffsetX + scope.clientWidth - width - 4;
     }
     if (outOfBoundsOnY) {
         normalizedY =
-            scopeOffsetY + scope.clientHeight - contextMenu.clientHeight - 4;
+            scopeOffsetY + scope.clientHeight - height - 4;
     }
     return {
         normalizedX,
@@ -34,38 +28,29 @@ function normalizePosition(mouseX, mouseY) {
     };
 }
 
-function openContextMenu(content, e) {
+function openContextMenu(content, container, e) {
 
-    $(".context-menu").html(content);
-    var position = normalizePosition(e.clientX, e.clientY);
-    $(".context-menu").css("top", position.normalizedY);
-    $(".context-menu").css("left", position.normalizedX);
+    console.log("opened");
 
-    if (!$(".context-menu").hasClass("visible")) {
-        $(".context-menu").addClass("visible");
-    }
-}
-
-$(document).on("click", function() {
-    if ($(".context-menu").hasClass("visible")) {
-        $(".context-menu").removeClass("visible");
-    }
-});
-
-$("body").contextmenu(function(e) {
     e.preventDefault();
+
+    if (content !== undefined) {
+        $(container).html(content);
+    }
+
+    var position = normalizePosition(e.clientX, e.clientY, $(container).clientWidth, $(container).clientHeight);
+    $(container).css("top", position.normalizedY);
+    $(container).css("left", position.normalizedX);
+
+    if (!$(container).hasClass("visible")) {
+        $(container).addClass("visible");
+    }
+}
+
+$(document).on("click", function () {
+    $(".context-menu").removeClass("visible");
 });
 
-function addContextMenu(content, items) {
-    $("body").on("contextmenu", items, function(e) {
-        openContextMenu(content, e);
-    });
-}
-
-function removeContextMenu() {
-    $("body").off("contextmenu");
-    $("body").contextmenu(function(e) {
-        e.preventDefault();
-    });
-
-}
+$(window).scroll(function () {
+    $(".context-menu").removeClass("visible");
+});

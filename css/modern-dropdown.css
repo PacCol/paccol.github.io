@@ -1,5 +1,6 @@
 .modern-dropdown>button {
     cursor: pointer;
+    margin: 0px;
 }
 
 .dropdown-active>button {
@@ -31,5 +32,5 @@
 .dropdown-content button {
     display: block;
     border: 0px;
-    width: 100%;
+    width: calc(100% - 1px);
 }

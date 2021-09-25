@@ -11,11 +11,16 @@
     top: 0px;
     background-color: var(--main-background-color);
     z-index: 2;
+    transition: box-shadow 0.2s;
+}
+
+.navbar.when-scrolled {
+    box-shadow: 0px 0px 8px var(--shadow-color);
 }
 
 @media (max-width: 699px) {
     .navbar {
-        z-index: 0;
+        z-index: 1;
     }
 }
 
@@ -55,7 +60,7 @@
     height: 42px;
     border-radius: 50%;
     background-color: var(--orange);
-    line-height: 42px;
+    line-height: 43px;
 }
 
 .profile-button .ripple {

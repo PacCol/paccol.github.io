@@ -16,6 +16,8 @@
 }
 
 .context-menu .item {
+    background-color: transparent;
+    display: block;
     padding: 7px 10px;
     font-size: 14px;
     font-weight: bold;
@@ -24,10 +26,19 @@
     border-radius: inherit;
     transition: 0.2s;
     white-space: nowrap;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    border: 0px;
+    font-family: "Montserrat", sans-serif;
 }
 
-.context-menu .item:hover {
+.context-menu .item:hover:enabled {
     background-color: var(--gray-1)
+}
+
+.context-menu .item:disabled {
+    opacity: 0.4;
 }
 
 .context-menu .item i {

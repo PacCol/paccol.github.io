@@ -1,5 +1,5 @@
 var loaderDelay = 600;
-var loaderRequestNbr = 0;
+var loaderRequested = 0;
 
 function loader(show) {
 
@@ -19,39 +19,18 @@ function loader(show) {
 
     if (show) {
 
-        loggingFunction("LOADER REQUESTED   ");
-        loaderRequestNbr++;
+        loaderRequested = true;
 
         setTimeout(function() {
-            if (loaderRequestNbr > 0) {
 
-                loggingFunction("LOADER SHOWN       ");
-
-                $(".loader-shadow").fadeIn(300);
-
-                setTimeout(function() {
-                    checkLoadingState();
-                }, 1000);
-
-                function checkLoadingState() {
-                    if (loaderRequestNbr == 0) {
-                        $(".loader-shadow").fadeOut(300);
-                        loggingFunction("LOADER HIDDEN");
-                    } else {
-                        setTimeout(function() {
-                            checkLoadingState();
-                        }, 30);
-                    }
-                }
+            if (loaderRequested) {
+                $(".loader-shadow").fadeIn(150);
             }
         }, loaderDelay);
     } else {
-        loaderRequestNbr--;
-        loggingFunction("LOADER HIDE REQUEST");
+        loaderRequested = false;
+        setTimeout(function() {
+            $(".loader-shadow").fadeOut(150);
+        }, 100);
     }
-}
-
-function loggingFunction(msg) {
-    var now = new Date();
-    //console.log("LOADER MSG: " + msg + "       TIME: " + now.getSeconds() + ":" + now.getMilliseconds() + "               Loader Request Nbr: " + loaderRequestNbr);
 }
