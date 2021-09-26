@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 
 <head>
     <title>RealCSS Example</title>
     <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <link rel="stylesheet" href="../fonts/material-design-icons/material-design-icons-round.css">
@@ -497,6 +498,16 @@ $("#search-bar input").keyup(function() {
                     <span class="slider"></span>
                 </label>
 
+                <h3>Checkbox</h3>
+
+                <input class="inp-cbx" id="cbx" type="checkbox" style="display: none" />
+                <label class="cbx" for="cbx"><span>
+                        <svg viewbox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span>
+                        <p>Example text</p>
+                </label>
+
             </div>
 
             <div id="loader">
@@ -516,7 +527,6 @@ setTimeout(function() {
 
                 <p>The loader will start to spin after 0.6 second if you don't use loader(false);</p>
                 <p>So if the loading process is very fast, the loader will not be shown.</p>
-                <p>The loader will spin at least 1 second.</p>
             </div>
 
             <div id="progress-bar">
