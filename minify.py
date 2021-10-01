@@ -43,7 +43,7 @@ while i < len(jsFiles):
 
 print("Complete!")
 
-url = 'https://javascript-minifier.com/raw'
+url = 'https://www.toptal.com/developers/javascript-minifier/raw'
 data = {'input': jsData}
 print("- Processing request: ", end="")
 response = requests.post(url, data=data)
