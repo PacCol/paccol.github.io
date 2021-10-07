@@ -59,10 +59,16 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background-color: var(--orange);
+    background-color: var(--warning);
     line-height: 43px;
+    transition: background-color 0.2s;
+}
+
+.profile-button:hover {
+    background-color: var(--warning-hover);
 }
 
 .profile-button .ripple {
-    background-color: var(--orange-hover);
+    background-color: var(--ripple-color);
+    opacity: 0.7;
 }

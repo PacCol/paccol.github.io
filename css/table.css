@@ -58,7 +58,7 @@
 
 .table .table-input {
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     min-width: 50px;
     outline: none;
     border: 1px solid var(--border-color);
