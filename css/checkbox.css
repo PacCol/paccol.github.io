@@ -1,6 +1,8 @@
 .checkbox-box {
     user-select: none;
-    margin: 4px 0px;
+    display: block;
+    width: fit-content;
+    margin: 15px 0px;
 }
 
 .checkbox-box span,
@@ -60,6 +62,10 @@
 
 .checkbox-box:hover span:first-child {
     border-color: var(--blue);
+}
+
+.checkbox-input {
+    display: none;
 }
 
 .checkbox-input:checked+.checkbox-box span:first-child {

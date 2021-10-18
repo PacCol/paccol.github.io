@@ -3,6 +3,8 @@
 //////////////////////////////////////////////////////////////////////////*/
 
 .btn {
+    display: block;
+    margin: 10px 0px;
     border-radius: 6px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -41,7 +43,7 @@
 
 .btn-primary.ripple-effect .ripple {
     background-color: var(--ripple-color);
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 
@@ -68,7 +70,7 @@
 
 .btn-secondary.ripple-effect .ripple {
     background-color: var(--main-color);
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 
@@ -90,7 +92,7 @@
 
 .btn-info.ripple-effect .ripple {
     background-color: var(--blue);
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 
@@ -111,7 +113,6 @@
 
 .btn-success.ripple-effect .ripple {
     background-color: var(--ripple-color);
-    opacity: 0.9;
 }
 
 
@@ -159,7 +160,7 @@
 // BUTTON BADGE ////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////*/
 
-.btn-primary .btn-badge {
+.btn .btn-badge {
     color: var(--main-color);
     background-color: var(--main-background-color);
     border-radius: 4px;
@@ -171,7 +172,11 @@
     font-size: 0.9em;
 }
 
-.btn-primary-sm .btn-badge {
+.btn-secondary .btn-badge {
+    background-color: var(--gray-1);
+}
+
+.btn-sm .btn-badge {
     padding-top: 0px;
     padding-bottom: 0px;
 }

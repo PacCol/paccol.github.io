@@ -33,4 +33,5 @@
     display: block;
     border: 0px;
     width: calc(100% - 1px);
+    margin: 0px;
 }

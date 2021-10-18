@@ -7,22 +7,22 @@
     <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/PacCol/RealCSS/v1.0.0-alpha/fonts/material-design-icons/material-design-icons-round.css">
+    <link rel="stylesheet" href="../fonts/material-design-icons/material-design-icons-round.css">
 
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/PacCol/RealCSS/v1.0.0-alpha/fonts/montserrat/montserrat.css">
+    <link rel="stylesheet" href="../fonts/montserrat/montserrat.css">
 
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/PacCol/RealCSS/v1.0.0-alpha/all.min.css">
+    <link rel="stylesheet" href="../all.css">
 
     <link rel="stylesheet" href="css/app.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/agate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
 
-    <script src="https://raw.githubusercontent.com/PacCol/RealCSS/v1.0.0-alpha/jquery.min.js "></script>
+    <script src="../jquery.min.js "></script>
 
 </head>
 
-<body onload='$("body").css("opacity", "1");'>
+<body>
 
     <div class="navbar">
 
@@ -145,11 +145,12 @@
 
                 <pre><code class="language-html">
 &#60;!DOCTYPE html&#62;
-&#60;html lang="en"&#62;
+&#60;html lang="en" translate="no"&#62;
 
 &#60;head&#62;
     &#60;title&#62;RealCSS Example&#60;/title&#62;
     &#60;meta charset="UTF-8"&#62;
+    &#60;meta name="google" content="notranslate"&#62;
     &#60;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&#62;
         
     &#60;link rel="stylesheet" href="path_to_RealCSS/fonts/material-design-icons/material-design-icons-round.css"&#62;
@@ -178,19 +179,7 @@
 
                 <p>This is the how you must use the library to create each section. Each section can be contained in a div with a specific id.</p>
 
-                <div class="control">
-                    <h1>Section title</h1>
-
-                    <div>
-                        <button class="btn btn-primary btn-primary-sm ripple-effect">sample button</button>
-                    </div>
-                </div>
-
-                <pre>
-&lt;div class="control"&gt;
-    &lt;h1&gt;App&lt;/h1&gt;
-&lt;/div&gt;
-                </pre>
+                <p>Not available...</p>
             </div>
 
             <div id="navbar">
@@ -385,53 +374,63 @@ $("#search-bar input").keyup(function() {
                     <h1>Buttons</h1>
                 </div>
 
-                <h3>Primary Button</h3>
-                <pre><code class="language-html">
-&#60;button class="btn btn-primary"&#62;Sample button&#60;/button&#62;
-&#60;button class="btn btn-primary btn-primary-sm"&#62;Sample button&#60;/button&#62;
-                </code></pre>
-                <button class="btn btn-primary">Sample button</button>
-                <button class="btn btn-primary btn-primary-sm">Sample button</button>
+                <h3>Simple button</h3>
 
-                <h3>Secondary Button</h3>
-                <pre><code class="language-html">
-&#60;button class="btn btn-secondary"&#62;Sample button&#60;/button&#62;
-&#60;button class="btn btn-secondary btn-secondary-sm"&#62;Sample button&#60;/button&#62;
-                </code></pre>
-                <button class="btn btn-secondary">Sample button</button>
-                <button class="btn btn-secondary btn-secondary-sm">Sample button</button>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-primary">Sample button</button>
+                        <button class="btn btn-secondary">Sample button</button>
+                        <button class="btn btn-info">Sample button</button>
+                        <button class="btn btn-success">Sample button</button>
+                        <button class="btn btn-warning">Sample button</button>
+                        <button class="btn btn-danger">Sample button</button>
+                    </div>
+                </div>
+
+                <h3>Small button</h3>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-sm btn-primary">Sample button</button>
+                        <button class="btn btn-sm btn-secondary">Sample button</button>
+                        <button class="btn btn-sm btn-info">Sample button</button>
+                        <button class="btn btn-sm btn-success">Sample button</button>
+                        <button class="btn btn-sm btn-warning">Sample button</button>
+                        <button class="btn btn-sm btn-danger">Sample button</button>
+                    </div>
+                </div>
 
                 <h3>Ripple effect</h3>
-                <p>Just add the class "ripple-effect".</p>
-                <pre><code class="language-html">
-&#60;button class="btn btn-primary ripple-effect"&#62;Sample button&#60;/button&#62;
-&#60;button class="btn btn-secondary ripple-effect"&#62;Sample button&#60;/button&#62;
-                </code></pre>
-                <button class="btn btn-primary ripple-effect">Sample button</button>
-                <button class="btn btn-secondary ripple-effect">Sample button</button>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-primary ripple-effect">Sample button</button>
+                        <button class="btn btn-secondary ripple-effect">Sample button</button>
+                        <button class="btn btn-info ripple-effect">Sample button</button>
+                        <button class="btn btn-success ripple-effect">Sample button</button>
+                        <button class="btn btn-warning ripple-effect">Sample button</button>
+                        <button class="btn btn-danger ripple-effect">Sample button</button>
+                    </div>
+                </div>
 
                 <h3>Dropdown</h3>
-                <pre><code class="language-html">
-&#60;div class="modern-dropdown"&#62;
-    &#60;button class="btn btn-primary btn-primary-sm ripple-effect"&#62;
-        Value&#60;i class="material-icons-round"&#62;expand_more&#60;/i&#62;
-    &#60;/button&#62;
-    &#60;div class="dropdown-content"&#62;
-        &#60;button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="1"&#62;1&#60;/button&#62;
-        &#60;button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="2"&#62;2&#60;/button&#62;
-        &#60;button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="3"&#62;3&#60;/button&#62;
-    &#60;/div&#62;
-&#60;/div&#62;
-                </code></pre>
 
-                <div class="modern-dropdown">
-                    <button class="btn btn-primary ripple-effect">
-                        Value<i class="material-icons-round">expand_more</i>
-                    </button>
-                    <div class="dropdown-content">
-                        <button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="1">1</button>
-                        <button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="2">2</button>
-                        <button class="btn btn-secondary btn-secondary-sm ripple-effect" data-value="3">3</button>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="modern-dropdown">
+                            <button class="btn btn-primary ripple-effect">
+                                Value<i class="material-icons-round">expand_more</i>
+                            </button>
+                            <div class="dropdown-content">
+                                <button class="btn btn-secondary btn-sm ripple-effect" data-value="1">1</button>
+                                <button class="btn btn-secondary btn-sm ripple-effect" data-value="2">2</button>
+                                <button class="btn btn-secondary btn-sm ripple-effect" data-value="3">3</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -439,15 +438,29 @@ $("#search-bar input").keyup(function() {
 
                 <p>You cannot add a badge on a secondary button.</p>
 
-                <pre><code class="language-html">
-&#60;button class="btn btn-primary ripple-effect"&#62;
-    Sample button&#60;span class="btn-badge"&#62;Some text&#60;/span&#62;
-&#60;/button&#62;
-                </code></pre>
-
-                <button class="btn btn-primary ripple-effect">
-                    Sample button<span class="btn-badge">Some text</span>
-                </button>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-primary ripple-effect">
+                            Sample button<span class="btn-badge">Some text</span>
+                        </button>
+                        <button class="btn btn-secondary ripple-effect">
+                            Sample button<span class="btn-badge">Some text</span>
+                        </button>
+                        <button class="btn btn-info ripple-effect">
+                            Sample button<span class="btn-badge">Some text</span>
+                        </button>
+                        <button class="btn btn-success ripple-effect">
+                            Sample button<span class="btn-badge">Some text</span>
+                        </button>
+                        <button class="btn btn-warning ripple-effect">
+                            Sample button<span class="btn-badge">Some text</span>
+                        </button>
+                        <button class="btn btn-danger ripple-effect">
+                            Sample button<span class="btn-badge">Some text</span>
+                        </button>
+                    </div>
+                </div>
 
             </div>
 
@@ -458,55 +471,79 @@ $("#search-bar input").keyup(function() {
 
                 <h3>Text input</h3>
 
-                <pre><code class="language-html">
-&#60;div class="modern-input"&#62;
-    &#60;input type="text" placeholder=" " autocomplete="off"&#62;
-    &#60;p&#62;Enter some text&#60;/p&#62;
-&#60;/div&#62;
-                </code></pre>
-
-                <div class="modern-input">
-                    <input type="text" placeholder=" " autocomplete="off">
-                    <p>Enter some text</p>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="modern-input">
+                            <input type="text" placeholder=" " autocomplete="off">
+                            <p>Enter some text</p>
+                        </div>
+                    </div>
                 </div>
 
                 <h3>Toggle switch</h3>
 
-                <pre><code class="language-html">
-&#60;label class="toggle-switch"&#62;
-    &#60;input type="checkbox"&#62;
-    &#60;span class="slider"&#62;&#60;/span&#62;
-&#60;/label&#62;
-                </code></pre>
+                <p>This input is not easy to use and it's highly recommended to use a container like this.</p>
 
-                <label class="toggle-switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="settings-item">
+                            <p>Example text</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
-                <p>You can control the dark theme with it.</p>
+                <h3>Toggle switch with ripple effect</h3>
 
-                <pre><code class="language-html">
-&#60;label class="toggle-switch dark-theme-toggle-switch"&#62;
-    &#60;input type="checkbox"&#62;
-    &#60;span class="slider"&#62;&#60;/span&#62;
-&#60;/label&#62;
-                </code></pre>
+                <p>You can also add a ripple effect on this container like this.</p>
 
-                <label class="toggle-switch dark-theme-toggle-switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="settings-item ripple-effect">
+                            <p>Example text</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Toggle switch to control the dark theme</h3>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="settings-item ripple-effect">
+                            <p>Example text</p>
+                            <label class="toggle-switch dark-theme-toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
                 <h3>Checkbox</h3>
 
-                <input class="checkbox-input" id="modern-checkbox" type="checkbox" style="display: none">
-                <label class="checkbox-box" for="modern-checkbox"><span>
-                        <svg viewbox="0 0 12 10">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg></span>
-                        <p>Example text</p>
-                </label>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <input class="checkbox-input" id="modern-checkbox" type="checkbox">
+                        <label class="checkbox-box" for="modern-checkbox"><span>
+                            <svg viewbox="0 0 12 10">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg></span>
+                            <p>Example text</p>
+                        </label>
+                    </div>
+                </div>
 
             </div>
 
@@ -615,31 +652,31 @@ alertBox("Alert title", "Alert content", `
                 <div class="control">
                     <h1>Context menu</h1>
                 </div>
+                <p>Not available...</p>
             </div>
 
             <div id="table">
                 <div class="control">
                     <h1>Table</h1>
                 </div>
+                <p>Not available...</p>
             </div>
 
             <div id="diagram">
                 <div class="control">
                     <h1>Diagram</h1>
                 </div>
+                <p>Not available...</p>
             </div>
 
         </div>
 
     </div>
 
-    <script src="https://raw.githubusercontent.com/PacCol/RealCSS/v1.0.0-alpha/all.min.js "></script>
+    <script src="../all.min.js "></script>
 
     <script src="js/menu.js "></script>
-
-    <script>
-        hljs.highlightAll();
-    </script>
+    <script src="js/code.js "></script>
 
 </body>
 

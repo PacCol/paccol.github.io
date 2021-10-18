@@ -17,7 +17,8 @@ body {
     margin: 0px !important;
     font-family: "Montserrat", sans-serif;
     background-color: var(--main-background-color);
-    overflow-y: auto;
+    height: 100vh;
+    display: none;
 }
 
 .during-transition,
@@ -25,9 +26,6 @@ body {
 .during-transition *::before,
 .during-transition *::after {
     transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s !important;
-    /*transition-delay: 0s;
-    transition: none !important;
-    */
 }
 
 .material-icons-round {
