@@ -17,6 +17,15 @@
     white-space: nowrap;
 }
 
+.control .btn {
+    margin: 0px;
+    display: inline-block;
+}
+
+.control .modern-dropdown {
+    display: inline-block;
+}
+
 .control h1 {
     margin-top: 3px;
     margin-bottom: 0px;

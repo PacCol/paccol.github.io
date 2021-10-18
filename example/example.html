@@ -179,7 +179,42 @@
 
                 <p>This is the how you must use the library to create each section. Each section can be contained in a div with a specific id.</p>
 
-                <p>Not available...</p>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="control">
+                            <h1>Section title</h1>
+
+                            <div>
+                                <div class="modern-dropdown">
+                                    <button class="btn btn-primary btn-sm ripple-effect">
+                                        Page size<span class="btn-badge">15</span><span class="material-icons-round">expand_more</span>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <button class="dropdown-button btn btn-secondary btn-sm">15</button>
+                                        <button class="dropdown-button btn btn-secondary btn-sm">30</button>
+                                        <button class="dropdown-button btn btn-secondary btn-sm">100</button>
+                                        <button class="dropdown-button btn btn-secondary btn-sm">500</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-primary ripple-effect">Click here!</button>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-sm btn-primary ripple-effect">
+                                    Help <i class="material-icons-round">support</i>
+                                </button>
+                                <button class="btn btn-sm btn-primary ripple-effect">
+                                    Back <i class="material-icons-round">undo</i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <h3>Small Title</h3>
+                        <p>Hello World!</p>
+                    </div>
+                </div>
+
             </div>
 
             <div id="navbar">
@@ -309,6 +344,7 @@ $("#search-bar input").keyup(function() {
                 </div>
 
                 <p>You can't use a menu without navbar</p>
+
                 <pre><code class="language-html">
 &#60;div class="navbar"&#62;
     &#60;!-- Navbar code --&#62;
@@ -659,7 +695,46 @@ alertBox("Alert title", "Alert content", `
                 <div class="control">
                     <h1>Table</h1>
                 </div>
-                <p>Not available...</p>
+
+                <h3>Simple table</h3>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                        <th>Column 3</th>
+                                        <th>Column 4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                        <td>Some text</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="diagram">

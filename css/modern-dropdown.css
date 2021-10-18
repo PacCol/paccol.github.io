@@ -29,8 +29,8 @@
     z-index: 1;
 }
 
-.dropdown-content button {
-    display: block;
+.dropdown-content .btn {
+    display: block !important;
     border: 0px;
     width: calc(100% - 1px);
     margin: 0px;
