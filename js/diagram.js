@@ -20,21 +20,20 @@ function createDiagram(diagram, names, colors, values) {
     if (maxValue < 14) {
         maxValue = 14;
     }
-    maxValue = maxValue + 4;
+
+    var diagramHeight = $(diagram).width() / 2 + 8;
+    var scaleFactor = $(diagram).width() / 2 / maxValue;
 
     for (let i = 0; i < names.length; i++) {
-        if (values[i] < 14) {
-            verifiedValue = 14;
-        } else {
-            verifiedValue = values[i];
-        }
+        let height = scaleFactor * values[i]
+        let offsetTop = diagramHeight - height;
         $(diagram).append(`<div class="diagram-bar ${colors[i]}"
             data-name="${names[i]}"
             data-percent="${values[i]}%"
-            style="height: ${verifiedValue * 2}px; margin-top: ${(maxValue - verifiedValue) * 2 + 2}px"></div>`);
+            style="height: ${height}px; margin-top: ${offsetTop}px"></div>`);
     }
 
-    $(diagram).css("height", (maxValue * 2 + 6) + "px");
+    $(diagram).css("height", diagramHeight + "px");
     $(window).on("resize", function() {
         vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
         $(diagram).css("max-width", (vw - 80) + "px");
