@@ -31,6 +31,7 @@
     color: var(--text-muted-color);
     border-radius: 50%;
     transition: 0.15s;
+    vertical-align: middle;
 }
 
 .nav-title .material-icons-round:hover {
@@ -47,6 +48,7 @@
     font-size: 18px;
     color: var(--text-muted-color);
     margin: 10px 0px;
+    vertical-align: middle;
 }
 
 .profile-button {

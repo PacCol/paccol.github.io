@@ -12,8 +12,6 @@ $(".code-demo").each(function() {
     }
 
     $(this).find(".code").html(`<pre><code class="language-html">${formattedHtml}</code></pre>`);
-
-    console.log(formattedHtml);
 });
 
 hljs.highlightAll();

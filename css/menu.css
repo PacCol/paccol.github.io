@@ -56,6 +56,7 @@
     color: var(--text-muted-color);
     border-radius: 50%;
     transition: 0.15s;
+    vertical-align: middle;
 }
 
 .menu-title .material-icons-round:hover {

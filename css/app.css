@@ -11,24 +11,28 @@
 
 .control {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 62px;
     user-select: none;
     white-space: nowrap;
+    line-height: 44px;
 }
 
-.control .btn {
-    margin: 0px;
-    display: inline-block;
-}
-
+.control .btn,
 .control .modern-dropdown {
+    margin: 0px 3px;
     display: inline-block;
+}
+
+.control .modern-dropdown .btn {
+    margin: 0px;
 }
 
 .control h1 {
     margin-top: 3px;
     margin-bottom: 0px;
+    margin-right: 20px;
     color: var(--text-muted-color);
     font-size: 22px;
 }

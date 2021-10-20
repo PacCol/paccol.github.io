@@ -3,11 +3,11 @@
     margin-bottom: 20px;
     letter-spacing: 0.25px;
     font-family: Arial, sans-serif;
+    height: 50px;
 }
 
 .modern-input input {
     box-sizing: border-box;
-    height: 50px;
     width: 100%;
     padding: 15px;
     font-size: 16px;
@@ -37,9 +37,9 @@ input:-webkit-autofill {
 }
 
 .modern-input p {
+    width: fit-content;
     transform: translateY(-49px);
     margin-left: 10px;
-    position: absolute;
     padding: 0px 5px;
     font-size: 16px;
     color: var(--text-muted-color);

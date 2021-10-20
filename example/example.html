@@ -107,9 +107,9 @@
                 <p>Table</p>
             </div>
 
-            <div class="menu-button ripple-effect" id="diagram-button">
-                <i class="material-icons-round">trending_up</i>
-                <p>Diagram</p>
+            <div class="menu-button ripple-effect" id="other-button">
+                <i class="material-icons-round">more_horiz</i>
+                <p>Other</p>
             </div>
 
             <hr class="divider">
@@ -402,7 +402,71 @@ $("#search-bar input").keyup(function() {
                 <div class="control">
                     <h1>Colors</h1>
                 </div>
-                <p>Not available...</p>
+                <p>For each container, the <strong>background</strong> color is the writed color. (not the text color)</p>
+                <p>If you wan't to set a color, use one of theses colors because of teir dark mode compatibility.</p>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="color-description" style="background-color: var(--main-background-color);">
+                            <p>--main-background-color</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--main-color);">
+                            <p>--main-color</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--border-color);">
+                            <p>--border-color</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--shadow-color);">
+                            <p>--shadow-color</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--overflow-color);">
+                            <p>--overflow-color</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--overflow-background-color);">
+                            <p>--overflow-background-color</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--ripple-color);">
+                            <p>--ripple-color</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--gray-1);">
+                            <p>--gray-1</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--gray-2);">
+                            <p>--gray-2</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--gray-3);">
+                            <p>--gray-3</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--blue);">
+                            <p>--blue</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--blue-hover);">
+                            <p>--blue-hover</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--blue-background);">
+                            <p>--blue-background</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--success);">
+                            <p>--success</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--success-hover);">
+                            <p>--success-hover</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--warning);">
+                            <p>--warning</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--warning-hover);">
+                            <p>--warning-hover</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--danger);">
+                            <p>--danger</p>
+                        </div>
+                        <div class="color-description" style="background-color: var(--danger-hover);">
+                            <p>--danger-hover</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="buttons">
@@ -675,20 +739,73 @@ alertBox("Alert title", "Alert content", `
                 <p>Just set the data-tooltip attribut to add a tooltip on an element.</p>
                 <p>Hover the button to show the tooltip.</p>
 
-                <pre><code class="language-html">
-&#60;button class="btn btn-primary" data-tooltip="Tooltip"&#62;Hover me&#60;/button&#62;
-                </code></pre>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-primary" data-tooltip="Tooltip">Hover me</button>
+                    </div>
+                </div>
 
-                <button class="btn btn-primary" data-tooltip="Tooltip">Hover me</button>
+                <p><i class="material-icons-round">warning</i> <strong>You cannot add a tooltip on a .ripple-effect element.</strong></p>
 
-                <p>You cannot add a tooltip on a .ripple-effect element.</p>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-primary ripple-effect" data-tooltip="Tooltip">Tooltip doesn't work!</button>
+                    </div>
+                </div>
             </div>
 
-            <div id="context-menu">
+            <div id="context-menu" oncontextmenu='openContextMenu(undefined, "#my-context-menu1", event);'>
                 <div class="control">
                     <h1>Context menu</h1>
                 </div>
-                <p>Not available...</p>
+
+                <p>That's a basic context menu.</p>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <h3 oncontextmenu='openContextMenu(undefined, "#my-context-menu1", event);'>Right-click on me!</h3>
+
+                        <div class="context-menu" id="my-context-menu1">
+                            <button class="item">Option 1</button>
+                            <button class="item">Option 2</button>
+                            <button class="item">Option 3</button>
+                            <button class="item">Option 4</button>
+                        </div>
+                    </div>
+                </div>
+
+                <p>With colored icons...</p>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <h3 oncontextmenu='openContextMenu(undefined, "#my-context-menu2", event);'>Right-click on me!</h3>
+
+                        <div class="context-menu" id="my-context-menu2">
+                            <button class="item"><i class="material-icons-round">visibility</i>Read</button>
+                            <button class="item"><i class="material-icons-round success">add</i>New</button>
+                            <button class="item"><i class="material-icons-round warning">edit</i>Edit</button>
+                            <button class="item"><i class="material-icons-round danger">delete</i>Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <h3 oncontextmenu='openContextMenu(undefined, "#my-context-menu3", event);'>Right-click on me!</h3>
+
+                        <div class="context-menu" id="my-context-menu3">
+                            <button class="item"><i class="material-icons-round">visibility</i>Read</button>
+                            <button class="item"><i class="material-icons-round success">add</i>New</button>
+                            <button class="item"><i class="material-icons-round warning">edit</i>Edit</button>
+                            <button class="item" disabled><i class="material-icons-round danger">delete</i>Delete (disabled)</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="table">
@@ -737,11 +854,25 @@ alertBox("Alert title", "Alert content", `
                 </div>
             </div>
 
-            <div id="diagram">
+            <div id="other">
                 <div class="control">
-                    <h1>Diagram</h1>
+                    <h1>Other</h1>
                 </div>
-                <p>Not available...</p>
+
+                <h3>Horizontal menu</h3>
+
+                <p>This example include a ripple effect but you can remove it removing the class .ripple-effect.</p>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="horizontal-menu">
+                            <button class="ripple-effect button-active">Section 1</button>
+                            <button class="ripple-effect">Section 2</button>
+                            <button class="ripple-effect">Section 3</button>
+                            <button class="ripple-effect align-right">Section 4</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

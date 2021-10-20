@@ -29,20 +29,17 @@ body {
 }
 
 .material-icons-round {
-    vertical-align: middle;
+    vertical-align: bottom;
     font-size: 1.25em;
     font-style: normal;
     user-select: none;
-    line-height: 1em;
-}
-
-h3,
-p {
-    vertical-align: middle;
+    line-height: 1;
+    font-weight: normal;
 }
 
 button .material-icons-round {
     line-height: 0.6em;
+    vertical-align: middle;
 }
 
 a,

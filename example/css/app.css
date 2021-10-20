@@ -33,10 +33,24 @@ pre code {
 .code-demo {
     border: 1px solid var(--border-color);
     border-radius: 16px;
-    padding: 10px;
+    padding: 18px;
+    margin: 20px 0px;
 }
 
 .demo {
     margin-top: 24px;
-    padding: 0px 8px;
+}
+
+.color-description {
+    border-radius: 8px;
+    padding: 0px 16px;
+    border: 1px solid var(--border-color);
+    margin: 12px 0px;
+}
+
+.color-description p {
+    border-radius: 6px;
+    background-color: var(--main-background-color);
+    border: 1px solid var(--border-color);
+    padding: 0px 4px;
 }
