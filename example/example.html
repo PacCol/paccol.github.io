@@ -873,6 +873,25 @@ alertBox("Alert title", "Alert content", `
                         </div>
                     </div>
                 </div>
+
+                <h3>Diagram</h3>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-primary ripple-effect" onclick="testDiagram();">Create</button>
+                        <div class="" id="diagram"></div>
+
+                        <script>
+                            function testDiagram() {
+                                var names = ["Foo", "Bar", "Foo"];
+                                var colors = ["success", "warning", "danger"];
+                                var values = [50, 25, 25];
+                                createDiagram("#diagram", names, colors, values);
+                            }
+                        </script>
+                    </div>
+                </div>
             </div>
 
         </div>
