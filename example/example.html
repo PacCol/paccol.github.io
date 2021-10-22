@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="../fonts/montserrat/montserrat.css">
 
-    <link rel="stylesheet" href="../all.min.css">
+    <link rel="stylesheet" href="../all.css">
 
     <link rel="stylesheet" href="css/app.css">
 
@@ -42,37 +42,37 @@
                 <i class="material-icons-round close-menu">close</i>
             </div>
 
-            <div class="menu-button ripple-effect" id="start-button">
+            <div class="menu-button primary ripple-effect" id="start-button">
                 <i class="material-icons-round">play_arrow</i>
                 <p>Start</p>
             </div>
 
-            <div class="menu-button ripple-effect" id="app-button">
+            <div class="menu-button primary ripple-effect" id="app-button">
                 <i class="material-icons-round">grid_view</i>
                 <p>App</p>
             </div>
 
-            <div class="menu-button ripple-effect" id="navbar-button">
+            <div class="menu-button primary ripple-effect" id="navbar-button">
                 <i class="material-icons-round">mouse</i>
                 <p>Navbar</p>
             </div>
 
-            <div class="menu-button ripple-effect" id="menu-button">
+            <div class="menu-button secondary ripple-effect" id="menu-button">
                 <i class="material-icons-round">menu</i>
                 <p>Menu</p>
             </div>
 
-            <div class="menu-button ripple-effect" id="colors-button">
+            <div class="menu-button success ripple-effect" id="colors-button">
                 <i class="material-icons-round">palette</i>
                 <p>Colors</p>
             </div>
 
-            <div class="menu-button ripple-effect" id="buttons-button">
+            <div class="menu-button warning ripple-effect" id="buttons-button">
                 <i class="material-icons-round">touch_app</i>
                 <p>Buttons</p>
             </div>
 
-            <div class="menu-button ripple-effect" id="inputs-button">
+            <div class="menu-button danger ripple-effect" id="inputs-button">
                 <i class="material-icons-round">keyboard</i>
                 <p>Inputs</p>
             </div>
@@ -474,45 +474,68 @@ $("#search-bar input").keyup(function() {
                     <h1>Buttons</h1>
                 </div>
 
-                <h3>Simple button</h3>
+                <h3>Simple buttons</h3>
 
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <button class="btn btn-primary">Sample button</button>
-                        <button class="btn btn-secondary">Sample button</button>
-                        <button class="btn btn-info">Sample button</button>
-                        <button class="btn btn-success">Sample button</button>
-                        <button class="btn btn-warning">Sample button</button>
-                        <button class="btn btn-danger">Sample button</button>
+                        <button class="btn btn-sp primary">Sample button</button>
+                        <button class="btn btn-sp secondary">Sample button</button>
+                        <button class="btn btn-sp success">Sample button</button>
+                        <button class="btn btn-sp warning">Sample button</button>
+                        <button class="btn btn-sp danger">Sample button</button>
                     </div>
                 </div>
 
-                <h3>Small button</h3>
+                <p>Add the class .ripple-effect to create this effect.</p>
 
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <button class="btn btn-sm btn-primary">Sample button</button>
-                        <button class="btn btn-sm btn-secondary">Sample button</button>
-                        <button class="btn btn-sm btn-info">Sample button</button>
-                        <button class="btn btn-sm btn-success">Sample button</button>
-                        <button class="btn btn-sm btn-warning">Sample button</button>
-                        <button class="btn btn-sm btn-danger">Sample button</button>
+                        <button class="btn btn-sp primary ripple-effect">Sample button</button>
+                        <button class="btn btn-sp secondary ripple-effect">Sample button</button>
+                        <button class="btn btn-sp success ripple-effect">Sample button</button>
+                        <button class="btn btn-sp warning ripple-effect">Sample button</button>
+                        <button class="btn btn-sp danger ripple-effect">Sample button</button>
                     </div>
                 </div>
 
-                <h3>Ripple effect</h3>
+                <h3>Small buttons</h3>
 
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <button class="btn btn-primary ripple-effect">Sample button</button>
-                        <button class="btn btn-secondary ripple-effect">Sample button</button>
-                        <button class="btn btn-info ripple-effect">Sample button</button>
-                        <button class="btn btn-success ripple-effect">Sample button</button>
-                        <button class="btn btn-warning ripple-effect">Sample button</button>
-                        <button class="btn btn-danger ripple-effect">Sample button</button>
+                        <button class="btn btn-sm btn-sp primary ripple-effect">Sample button</button>
+                        <button class="btn btn-sm btn-sp secondary ripple-effect">Sample button</button>
+                        <button class="btn btn-sm btn-sp success ripple-effect">Sample button</button>
+                        <button class="btn btn-sm btn-sp warning ripple-effect">Sample button</button>
+                        <button class="btn btn-sm btn-sp danger ripple-effect">Sample button</button>
+                    </div>
+                </div>
+
+                <h3>Light buttons</h3>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-lt primary ripple-effect">Sample button</button>
+                        <button class="btn btn-lt secondary ripple-effect">Sample button</button>
+                        <button class="btn btn-lt success ripple-effect">Sample button</button>
+                        <button class="btn btn-lt warning ripple-effect">Sample button</button>
+                        <button class="btn btn-lt danger ripple-effect">Sample button</button>
+                    </div>
+                </div>
+
+                <h3>Outligned buttons</h3>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-ol primary ripple-effect">Sample button</button>
+                        <button class="btn btn-ol secondary ripple-effect">Sample button</button>
+                        <button class="btn btn-ol success ripple-effect">Sample button</button>
+                        <button class="btn btn-ol warning ripple-effect">Sample button</button>
+                        <button class="btn btn-ol danger ripple-effect">Sample button</button>
                     </div>
                 </div>
 
@@ -522,13 +545,13 @@ $("#search-bar input").keyup(function() {
                     <div class="code"></div>
                     <div class="demo">
                         <div class="modern-dropdown">
-                            <button class="btn btn-primary ripple-effect">
+                            <button class="btn btn-sp primary ripple-effect">
                                 Value<i class="material-icons-round">expand_more</i>
                             </button>
                             <div class="dropdown-content">
-                                <button class="btn btn-secondary btn-sm ripple-effect" data-value="1">1</button>
-                                <button class="btn btn-secondary btn-sm ripple-effect" data-value="2">2</button>
-                                <button class="btn btn-secondary btn-sm ripple-effect" data-value="3">3</button>
+                                <button class="btn btn-ol btn-sm primary ripple-effect" data-value="1">1</button>
+                                <button class="btn btn-ol btn-sm primary ripple-effect" data-value="2">2</button>
+                                <button class="btn btn-ol btn-sm primary ripple-effect" data-value="3">3</button>
                             </div>
                         </div>
                     </div>
@@ -536,27 +559,22 @@ $("#search-bar input").keyup(function() {
 
                 <h3>Badge</h3>
 
-                <p>You cannot add a badge on a secondary button.</p>
-
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <button class="btn btn-primary ripple-effect">
+                        <button class="btn btn-sp primary ripple-effect">
                             Sample button<span class="btn-badge">Some text</span>
                         </button>
-                        <button class="btn btn-secondary ripple-effect">
+                        <button class="btn btn-sp secondary ripple-effect">
                             Sample button<span class="btn-badge">Some text</span>
                         </button>
-                        <button class="btn btn-info ripple-effect">
+                        <button class="btn btn-sp success ripple-effect">
                             Sample button<span class="btn-badge">Some text</span>
                         </button>
-                        <button class="btn btn-success ripple-effect">
+                        <button class="btn btn-sp warning ripple-effect">
                             Sample button<span class="btn-badge">Some text</span>
                         </button>
-                        <button class="btn btn-warning ripple-effect">
-                            Sample button<span class="btn-badge">Some text</span>
-                        </button>
-                        <button class="btn btn-danger ripple-effect">
+                        <button class="btn btn-sp danger ripple-effect">
                             Sample button<span class="btn-badge">Some text</span>
                         </button>
                     </div>

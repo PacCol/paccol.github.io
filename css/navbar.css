@@ -24,31 +24,37 @@
     }
 }
 
-.nav-title .material-icons-round {
-    margin-left: 18px;
-    margin-right: 10px;
+.navbar .material-icons-round {
+    line-height: 42px;
+    width: 42px;
+    text-align: center;
+    margin: 0px 14px;
     font-size: 28px;
     color: var(--text-muted-color);
     border-radius: 50%;
     transition: 0.15s;
-    vertical-align: middle;
 }
 
-.nav-title .material-icons-round:hover {
-    background-color: var(--gray-1);
-    box-shadow: 0px 0px 0px 8px var(--gray-1);
+@media not all and (pointer: coarse) {
+    .navbar .material-icons-round:hover {
+        background-color: var(--gray-1);
+        box-shadow: 0px 0px 0px 2px var(--gray-1);
+    }
 }
 
-.nav-title .material-icons-round:active {
+.navbar .material-icons-round:active {
     transform: scale(0.8);
+}
+
+.nav-title .material-icons-round {
+    margin-right: -13px;
 }
 
 .nav-title h3 {
     display: inline-block;
     font-size: 18px;
     color: var(--text-muted-color);
-    margin: 10px 0px;
-    vertical-align: middle;
+    margin: 10px 18px;
 }
 
 .profile-button {

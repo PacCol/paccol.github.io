@@ -90,12 +90,12 @@
 }
 
 .menu-button-active {
-    color: var(--blue);
-    background-color: var(--blue-background) !important;
+    color: var(--color);
+    background-color: var(--light-bg-color) !important;
 }
 
 .menu-button .ripple {
-    background-color: var(--blue);
+    background-color: var(--color);
     opacity: 0.6;
 }
 

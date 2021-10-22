@@ -9,16 +9,16 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 13px;
-    transition: background-color 0.2s, opacity 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s;
     user-select: none;
     white-space: nowrap;
     outline: none;
     border: 0px;
-    padding: 11px 24px 11px 24px;
+    padding: 11px 24px;
 }
 
 .btn-sm {
-    padding: 7px 12px 7px 12px;
+    padding: 7px 12px;
 }
 
 .btn:disabled {
@@ -26,139 +26,79 @@
 }
 
 
-/*//////////////////////////////////////////////////////////////////////////
-// BUTTON PRIMARY //////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////
+//// BUTTON SIMPLE (btn-sp) //////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////*/
 
-.btn-primary {
+.btn-sp {
     color: var(--main-background-color);
-    background-color: var(--blue);
+    background-color: var(--color);
 }
 
 @media not all and (pointer: coarse) {
-    .btn-primary:hover {
-        background-color: var(--blue-hover);
+    .btn-sp:hover {
+        background-color: var(--hover-color);
     }
 }
 
-.btn-primary.ripple-effect .ripple {
+.btn-sp .ripple {
     background-color: var(--ripple-color);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 
-/*/ ////////////////////////////////////////////////////////////////////////
-// BUTTON SECONDARY ////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////
+//// BUTTON LIGHT (btn-lt) ///////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////*/
 
-.btn-secondary {
-    border: 1px solid var(--border-color);
-    padding: 10px 23px 10px 23px;
-    color: var(--blue);
-    background-color: var(--main-background-color);
-}
-
-.btn-secondary.btn-sm {
-    padding: 6px 11px 6px 11px;
-}
-
-@media not all and (pointer: coarse) {
-    .btn-secondary:hover {
-        background-color: var(--gray-1);
-    }
-}
-
-.btn-secondary.ripple-effect .ripple {
-    background-color: var(--main-color);
-    opacity: 0.5;
-}
-
-
-/*//////////////////////////////////////////////////////////////////////////
-// BUTTON INFO /////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////*/
-
-.btn-info {
-    color: var(--blue);
-    background-color: var(--blue-background);
+.btn-lt {
+    color: var(--color);
+    background-color: var(--light-bg-color);
     transition: box-shadow 0.2s;
 }
 
 @media not all and (pointer: coarse) {
-    .btn-info:hover {
-        box-shadow: 0px 0px 5px var(--blue);
+    .btn-lt:hover {
+        box-shadow: 0px 0px 5px var(--color);
     }
 }
 
-.btn-info.ripple-effect .ripple {
-    background-color: var(--blue);
+.btn-lt .ripple {
+    background-color: var(--color);
     opacity: 0.7;
 }
 
 
-/*//////////////////////////////////////////////////////////////////////////
-// BUTTON SUCCESS /////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////
+//// BUTTON OUTLINED (btn-ol) ////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////*/
 
-.btn-success {
-    color: var(--main-background-color);
-    background-color: var(--success);
+.btn-ol {
+    padding: 10px 24px;
+    color: var(--color);
+    background-color: var(--main-background-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-ol.btn-sm {
+    padding: 6px 12px;
 }
 
 @media not all and (pointer: coarse) {
-    .btn-success:hover {
-        background-color: var(--success-hover);
+    .btn-ol:hover {
+        background-color: var(--overflow-background-color);
     }
 }
 
-.btn-success.ripple-effect .ripple {
-    background-color: var(--ripple-color);
-}
-
-
-/*//////////////////////////////////////////////////////////////////////////
-// BUTTON WARNING /////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////*/
-
-.btn-warning {
-    background-color: var(--warning);
-}
-
-@media not all and (pointer: coarse) {
-    .btn-warning:hover {
-        background-color: var(--warning-hover);
-    }
-}
-
-.btn-warning.ripple-effect .ripple {
-    background-color: var(--ripple-color);
-}
-
-
-/*//////////////////////////////////////////////////////////////////////////
-// BUTTON DANGER /////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////*/
-
-.btn-danger {
-    color: var(--main-background-color);
-    background-color: var(--danger);
-}
-
-@media not all and (pointer: coarse) {
-    .btn-danger:hover {
-        background-color: var(--danger-hover);
-    }
-}
-
-.btn-danger.ripple-effect .ripple {
-    background-color: var(--ripple-color);
+.btn-ol .ripple {
+    background-color: var(--main-color);
     opacity: 0.6;
 }
 
 
-/*//////////////////////////////////////////////////////////////////////////
-// BUTTON BADGE ////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////
+//// BUTTON BADGE (btn-badge) ////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////*/
 
 .btn .btn-badge {
     color: var(--main-color);
