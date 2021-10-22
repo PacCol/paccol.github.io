@@ -32,6 +32,6 @@
 .dropdown-content .btn {
     display: block !important;
     border: 0px;
-    width: calc(100% - 1px);
+    width: 100%;
     margin: 0px;
 }

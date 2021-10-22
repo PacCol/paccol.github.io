@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <title>RealCSS Example</title>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="../fonts/material-design-icons/material-design-icons-round.css">
+
+    <link rel="stylesheet" href="../fonts/montserrat/montserrat.css">
+
+    <link rel="stylesheet" href="../all.css">
+
+    <script src="../jquery.min.js "></script>
+
+    <style>
+        .menu {
+            flex-basis: 254px;
+            width: 254px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="nav-title">
+            <i class="material-icons-round open-menu">menu</i>
+            <h3>App title</h3>
+        </div>
+
+    </div>
+
+    <div class="main-container">
+
+        <div class="menu">
+
+            <div class="menu-title">
+                <h3>App title</h3>
+                <i class="material-icons-round close-menu">close</i>
+            </div>
+
+            <div class="menu-button primary ripple-effect">
+                <i class="material-icons-round">play_arrow</i>
+                <p>Start</p>
+            </div>
+
+            <div class="menu-button secondary ripple-effect">
+                <i class="material-icons-round">home</i>
+                <p>Home</p>
+            </div>
+
+            <div class="menu-button success ripple-effect">
+                <i class="material-icons-round">crop_original</i>
+                <p>Photos</p>
+            </div>
+
+            <div class="menu-button warning ripple-effect">
+                <i class="material-icons-round">chat</i>
+                <p>Messages</p>
+            </div>
+
+            <div class="menu-button danger ripple-effect">
+                <i class="material-icons-round">language</i>
+                <p>Web</p>
+            </div>
+
+            <hr class="divider">
+
+            <div class="menu-button">
+                <i class="material-icons-round">dark_mode</i>
+                <p>Dark mode</p>
+                <label class="toggle-switch dark-theme-toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="app"></div>
+
+    </div>
+
+    <script src="../all.min.js "></script>
+
+    <script>
+        $(".menu-button").click(function() {
+            if ($(this).hasClass("ripple-effect")) {
+                $(".menu-button").removeClass("menu-button-active");
+                $(this).addClass("menu-button-active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
