@@ -112,7 +112,7 @@
             <div class="menu-button">
                 <i class="material-icons-round">dark_mode</i>
                 <p>Dark mode</p>
-                <label class="toggle-switch dark-theme-toggle-switch">
+                <label class="toggle-switch primary dark-theme-toggle-switch">
                     <input type="checkbox">
                     <span class="slider"></span>
                 </label>
@@ -172,7 +172,8 @@
                     <h1>App</h1>
                 </div>
 
-                <p>This is the how you must use the library to create each section. Each section can be contained in a div with a specific id.</p>
+                <p>This is the how you must use the library to create each section. Each section can be contained in a
+                    div with a specific id.</p>
 
                 <div class="code-demo">
                     <div class="code"></div>
@@ -183,7 +184,8 @@
                             <div>
                                 <div class="modern-dropdown">
                                     <button class="btn btn-sp primary btn-sm ripple-effect">
-                                        Page size<span class="btn-badge">15</span><span class="material-icons-round">expand_more</span>
+                                        Page size<span class="btn-badge">15</span><span
+                                            class="material-icons-round">expand_more</span>
                                     </button>
                                     <div class="dropdown-content">
                                         <button class="dropdown-button btn btn-sm btn-ol primary">15</button>
@@ -217,7 +219,206 @@
                     <h1>Navbar & Menu</h1>
                 </div>
 
-                <p>Don't forget to use media queries to hide the search bar there is not enough place to fit it.</p>
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; translate=&quot;no&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;RealCSS Example&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;google&quot; content=&quot;notranslate&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../fonts/material-design-icons/material-design-icons-round.css&quot;&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../fonts/montserrat/montserrat.css&quot;&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../all.min.css&quot;&gt;
+
+    &lt;script src=&quot;../jquery.min.js &quot;&gt;&lt;/script&gt;
+
+    &lt;style&gt;
+        @media (max-width: 860px) {
+            .search-bar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar .btn {
+                display: none;
+            }
+        }
+
+        .menu {
+            flex-basis: 254px;
+            width: 254px;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class=&quot;navbar&quot;&gt;
+
+        &lt;div class=&quot;nav-title&quot;&gt;
+            &lt;i class=&quot;material-icons-round open-menu&quot;&gt;menu&lt;/i&gt;
+            &lt;h3&gt;App title&lt;/h3&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;search-bar&quot; class=&quot;search-bar&quot;&gt;
+            &lt;div class=&quot;search-field&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;search&lt;/i&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Search something...&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;expand_more&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;search-list&quot; class=&quot;search-list&quot;&gt;
+                &lt;hr class=&quot;divider&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;script&gt;
+            $(document).ready(function() {
+                $(&quot;#search-bar input&quot;).keyup(function() {
+                    let val = $(&quot;#search-bar input&quot;).val();
+                    if (val == &quot;&quot;) {
+                        $(&quot;#search-list&quot;).hide();
+                        return;
+                    }
+
+                    var results = [&quot;result 1&quot;, &quot;result 2&quot;];
+
+                    $(&quot;#search-list a&quot;).remove();
+
+                    if (results.length != 0) {
+                        $(&quot;#search-list&quot;).show();
+
+                        for (var i = 0; i &lt; results.length; i++) {
+                            $(&quot;#search-list&quot;).append(`
+                                &lt;a href=&quot;#&quot;&gt;${results[i]}&lt;/a&gt;
+                            `);
+                        }
+
+                    } else {
+                        $(&quot;#search-list&quot;).hide();
+                    }
+
+                });
+            });
+        &lt;/script&gt;
+
+        &lt;button class=&quot;btn btn-sp primary ripple-effect&quot;&gt;Action&lt;/button&gt;
+
+        &lt;i class=&quot;material-icons-round&quot;&gt;settings&lt;/i&gt;
+
+        &lt;div class=&quot;icon-group&quot;&gt;
+            &lt;i class=&quot;material-icons-round&quot;&gt;help&lt;/i&gt;
+            &lt;p class=&quot;profile-button ripple-effect&quot;&gt;U&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;main-container&quot;&gt;
+
+        &lt;div class=&quot;menu&quot;&gt;
+
+            &lt;div class=&quot;menu-title&quot;&gt;
+                &lt;h3&gt;App title&lt;/h3&gt;
+                &lt;i class=&quot;material-icons-round close-menu&quot;&gt;close&lt;/i&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button menu-button-active primary ripple-effect&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;play_arrow&lt;/i&gt;
+                &lt;p&gt;Start&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button secondary ripple-effect&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;home&lt;/i&gt;
+                &lt;p&gt;Home&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button success ripple-effect&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;crop_original&lt;/i&gt;
+                &lt;p&gt;Photos&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button warning ripple-effect&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;chat&lt;/i&gt;
+                &lt;p&gt;Messages&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button danger ripple-effect&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;language&lt;/i&gt;
+                &lt;p&gt;Web&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;hr class=&quot;divider&quot;&gt;
+
+            &lt;div class=&quot;menu-button&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;info&lt;/i&gt;
+                &lt;p&gt;Status&lt;/p&gt;
+                &lt;div class=&quot;indicator primary&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;info&lt;/i&gt;
+                &lt;p&gt;Status&lt;/p&gt;
+                &lt;div class=&quot;indicator secondary&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;info&lt;/i&gt;
+                &lt;p&gt;Status&lt;/p&gt;
+                &lt;div class=&quot;indicator success&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;info&lt;/i&gt;
+                &lt;p&gt;Status&lt;/p&gt;
+                &lt;div class=&quot;indicator warning&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;menu-button&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;info&lt;/i&gt;
+                &lt;p&gt;Status&lt;/p&gt;
+                &lt;div class=&quot;indicator danger&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;hr class=&quot;divider&quot;&gt;
+
+            &lt;div class=&quot;menu-button&quot;&gt;
+                &lt;i class=&quot;material-icons-round&quot;&gt;dark_mode&lt;/i&gt;
+                &lt;p&gt;Dark mode&lt;/p&gt;
+                &lt;label class=&quot;toggle-switch primary dark-theme-toggle-switch&quot;&gt;
+                    &lt;input type=&quot;checkbox&quot;&gt;
+                    &lt;span class=&quot;slider&quot;&gt;&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+
+            &lt;script&gt;
+                $(&quot;.menu-button&quot;).click(function () {
+                    if ($(this).hasClass(&quot;ripple-effect&quot;)) {
+                        $(&quot;.menu-button&quot;).removeClass(&quot;menu-button-active&quot;);
+                        $(this).addClass(&quot;menu-button-active&quot;);
+                    }
+                });
+            &lt;/script&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;app&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;script src=&quot;../all.min.js &quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                </code></pre>
+
+                <p>Don't forget to use media queries hide the elements (search bar, buttons, icons) when there is not
+                    enough place to fit them.</p>
 
                 <iframe src="testNavMenu.html"></iframe>
 
@@ -227,7 +428,8 @@
                 <div class="control">
                     <h1>Colors</h1>
                 </div>
-                <p>For each container, the <strong>background</strong> color is the writed color. (not the text color)</p>
+                <p>For each container, the <strong>background</strong> color is the writed color. (not the text color)
+                </p>
                 <p>If you wan't to set a color, use one of theses colors because of teir dark mode compatibility.</p>
 
                 <div class="code-demo">
@@ -443,7 +645,27 @@
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <div class="modern-input">
+                        <div class="modern-input primary">
+                            <input type="text" placeholder=" " autocomplete="off">
+                            <p>Enter some text</p>
+                        </div>
+
+                        <div class="modern-input secondary">
+                            <input type="text" placeholder=" " autocomplete="off">
+                            <p>Enter some text</p>
+                        </div>
+
+                        <div class="modern-input success">
+                            <input type="text" placeholder=" " autocomplete="off">
+                            <p>Enter some text</p>
+                        </div>
+
+                        <div class="modern-input warning">
+                            <input type="text" placeholder=" " autocomplete="off">
+                            <p>Enter some text</p>
+                        </div>
+
+                        <div class="modern-input danger">
                             <input type="text" placeholder=" " autocomplete="off">
                             <p>Enter some text</p>
                         </div>
@@ -459,7 +681,39 @@
                     <div class="demo">
                         <div class="settings-item">
                             <p>Example text</p>
-                            <label class="toggle-switch">
+                            <label class="toggle-switch primary">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="settings-item">
+                            <p>Example text</p>
+                            <label class="toggle-switch secondary">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="settings-item">
+                            <p>Example text</p>
+                            <label class="toggle-switch success">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="settings-item">
+                            <p>Example text</p>
+                            <label class="toggle-switch warning">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="settings-item">
+                            <p>Example text</p>
+                            <label class="toggle-switch danger">
                                 <input type="checkbox">
                                 <span class="slider"></span>
                             </label>
@@ -474,9 +728,9 @@
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <div class="settings-item ripple-effect">
+                        <div class="settings-item primary ripple-effect">
                             <p>Example text</p>
-                            <label class="toggle-switch">
+                            <label class="toggle-switch primary">
                                 <input type="checkbox">
                                 <span class="slider"></span>
                             </label>
@@ -489,9 +743,9 @@
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <div class="settings-item ripple-effect">
+                        <div class="settings-item">
                             <p>Example text</p>
-                            <label class="toggle-switch dark-theme-toggle-switch">
+                            <label class="toggle-switch primary dark-theme-toggle-switch">
                                 <input type="checkbox">
                                 <span class="slider"></span>
                             </label>
@@ -504,11 +758,43 @@
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <input class="checkbox-input" id="modern-checkbox" type="checkbox">
-                        <label class="checkbox-box" for="modern-checkbox"><span>
-                            <svg viewbox="0 0 12 10">
-                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                            </svg></span>
+                        <input class="checkbox-input" id="modern-checkbox1" type="checkbox">
+                        <label class="checkbox-box primary" for="modern-checkbox1"><span>
+                                <svg viewbox="0 0 12 10">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                </svg></span>
+                            <p>Example text</p>
+                        </label>
+
+                        <input class="checkbox-input" id="modern-checkbox2" type="checkbox">
+                        <label class="checkbox-box secondary" for="modern-checkbox2"><span>
+                                <svg viewbox="0 0 12 10">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                </svg></span>
+                            <p>Example text</p>
+                        </label>
+
+                        <input class="checkbox-input" id="modern-checkbox3" type="checkbox">
+                        <label class="checkbox-box success" for="modern-checkbox3"><span>
+                                <svg viewbox="0 0 12 10">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                </svg></span>
+                            <p>Example text</p>
+                        </label>
+
+                        <input class="checkbox-input" id="modern-checkbox4" type="checkbox">
+                        <label class="checkbox-box warning" for="modern-checkbox4"><span>
+                                <svg viewbox="0 0 12 10">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                </svg></span>
+                            <p>Example text</p>
+                        </label>
+
+                        <input class="checkbox-input" id="modern-checkbox5" type="checkbox">
+                        <label class="checkbox-box danger" for="modern-checkbox5"><span>
+                                <svg viewbox="0 0 12 10">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                </svg></span>
                             <p>Example text</p>
                         </label>
                     </div>
@@ -522,17 +808,53 @@
                 </div>
                 <p>To show the loader, use the function loader.</p>
 
-                <pre><code class="language-js">
-loader(true);
-setTimeout(function() {
-    loader(false);
-}, 4000);
-                </code></pre>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-sp primary ripple-effect" onclick="loaderDemo();">Loader</button>
 
-                <button class="btn btn-primary ripple-effect" onclick="loader(true); setTimeout(function() { loader(false); }, 4000);">Loader</button>
+                        <script>
+                            function loaderDemo() {
+                                loader(true);
+                                setTimeout(function () {
+                                    loader(false);
+                                }, 4000);
+                            }
+                        </script>
+                    </div>
+                </div>
 
                 <p>The loader will start to spin after 0.6 second if you don't use loader(false);</p>
                 <p>So if the loading process is very fast, the loader will not be shown.</p>
+                <p>You can choose the color of the loader like this:</p>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-sp primary ripple-effect" onclick="loaderDemoColor();">Loader</button>
+
+                        <script>
+                            function loaderDemoColor() {
+                                loader(true, "primary");
+                                setTimeout(function () {
+                                    loader(true, "secondary");
+                                    setTimeout(function () {
+                                        loader(true, "success");
+                                        setTimeout(function () {
+                                            loader(true, "warning");
+                                            setTimeout(function () {
+                                                loader(true, "danger");
+                                                setTimeout(function () {
+                                                    loader(false);
+                                                }, 1000);
+                                            }, 1000);
+                                        }, 1000);
+                                    }, 1000);
+                                }, 1600);
+                            }
+                        </script>
+                    </div>
+                </div>
             </div>
 
             <div id="progress-bar">
@@ -542,35 +864,39 @@ setTimeout(function() {
 
                 <p>To create a progress bar use the following code.</p>
 
-                <pre><code class="language-html">
-&#60;div class="progress-bar"&#62;
-    &#60;div class="progress"&#62;&#60;/div&#62;
-&#60;/div&#62;
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="progress-bar primary">
+                            <div class="progress"></div>
+                        </div>
 
-&#60;button class="btn btn-primary ripple-effect" onclick="progress();"&#62;Progress&#60;/button&#62;
-                </code></pre>
+                        <div class="progress-bar secondary">
+                            <div class="progress"></div>
+                        </div>
 
-                <p>Now to display the percentage use this script.</p>
+                        <div class="progress-bar success">
+                            <div class="progress"></div>
+                        </div>
 
-                <pre><code class="language-js">
-function progress() {
-    var percentage = Math.floor(Math.random() * 100);
-    $(".progress").css("width", percentage + "%");
-}
-                </code></pre>
+                        <div class="progress-bar warning">
+                            <div class="progress"></div>
+                        </div>
 
-                <div class="progress-bar">
-                    <div class="progress"></div>
+                        <div class="progress-bar danger">
+                            <div class="progress"></div>
+                        </div>
+
+                        <button class="btn btn-sp primary ripple-effect" onclick="progress();">Progress</button>
+
+                        <script>
+                            function progress() {
+                                var percentage = Math.floor(Math.random() * 100);
+                                $(".progress").css("width", percentage + "%");
+                            }
+                        </script>
+                    </div>
                 </div>
-
-                <button class="btn btn-primary ripple-effect" onclick="progress();">Progress</button>
-
-                <script>
-                    function progress() {
-                        var percentage = Math.floor(Math.random() * 100);
-                        $(".progress").css("width", percentage + "%");
-                    }
-                </script>
             </div>
 
             <div id="alert">
@@ -578,26 +904,26 @@ function progress() {
                     <h1>Alert</h1>
                 </div>
 
-                <p>To open an alert box, give the alert title, the alert content (text only) and the alert actions (buttons, inputs)</p>
+                <p>To open an alert box, give the alert title, the alert content (text only) and the alert actions
+                    (buttons, inputs)</p>
 
                 <p>Add the class .cancel to a button to make it close the alert box.</p>
 
-                <pre><code class="language-js">
-alertBox("Alert title", "Alert content", `
-    &#60;button class="btn btn-secondary ripple-effect"&#62;Example&#60;/button&#62;
-    &#60;button class="btn btn-primary btn-align-right ripple-effect cancel"&#62;Close&#60;/button&#62;
-`);
-                </code></pre>
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <button class="btn btn-sp primary ripple-effect" onclick="demoAlert();">Alert</button>
 
-                <button class="btn btn-primary ripple-effect" onclick="demoAlert();">Alert</button>
+                        <script>
+                            function demoAlert() {
+                                alertBox("Alert title", "Alert content", `
+                                    <button class="btn btn-ol primary ripple-effect">Example</button>
+                                    <button class="btn btn-sp primary btn-align-right ripple-effect cancel">Close</button>`);
+                            }
+                        </script>
+                    </div>
+                </div>
 
-                <script>
-                    function demoAlert() {
-                        alertBox("Alert title", "Alert content", `
-                            <button class="btn btn-secondary ripple-effect">Example</button>
-                            <button class="btn btn-primary btn-align-right ripple-effect cancel">Close</button>`);
-                    }
-                </script>
             </div>
 
             <div id="tooltip">
@@ -611,16 +937,18 @@ alertBox("Alert title", "Alert content", `
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <button class="btn btn-primary" data-tooltip="Tooltip">Hover me</button>
+                        <button class="btn btn-sp primary" data-tooltip="Tooltip">Hover me</button>
                     </div>
                 </div>
 
-                <p><i class="material-icons-round">warning</i> <strong>You cannot add a tooltip on a .ripple-effect element.</strong></p>
+                <p><i class="material-icons-round">warning</i>
+                    <strong>You cannot add a tooltip on a .ripple-effect element.</strong>
+                </p>
 
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <button class="btn btn-primary ripple-effect" data-tooltip="Tooltip">Tooltip doesn't work!</button>
+                        <button class="btn btn-sp primary ripple-effect" data-tooltip="Tooltip">Tooltip doesn't work!</button>
                     </div>
                 </div>
             </div>
@@ -655,9 +983,9 @@ alertBox("Alert title", "Alert content", `
 
                         <div class="context-menu" id="my-context-menu2">
                             <button class="item"><i class="material-icons-round">visibility</i>Read</button>
-                            <button class="item"><i class="material-icons-round success">add</i>New</button>
-                            <button class="item"><i class="material-icons-round warning">edit</i>Edit</button>
-                            <button class="item"><i class="material-icons-round danger">delete</i>Delete</button>
+                            <button class="item"><i class="material-icons-round set-color success">add</i>New</button>
+                            <button class="item"><i class="material-icons-round set-color warning">edit</i>Edit</button>
+                            <button class="item"><i class="material-icons-round set-color danger">delete</i>Delete</button>
                         </div>
                     </div>
                 </div>
@@ -669,9 +997,9 @@ alertBox("Alert title", "Alert content", `
 
                         <div class="context-menu" id="my-context-menu3">
                             <button class="item"><i class="material-icons-round">visibility</i>Read</button>
-                            <button class="item"><i class="material-icons-round success">add</i>New</button>
-                            <button class="item"><i class="material-icons-round warning">edit</i>Edit</button>
-                            <button class="item" disabled><i class="material-icons-round danger">delete</i>Delete (disabled)</button>
+                            <button class="item"><i class="material-icons-round set-color success">add</i>New</button>
+                            <button class="item"><i class="material-icons-round set-color warning">edit</i>Edit</button>
+                            <button class="item" disabled><i class="material-icons-round set-color danger">delete</i>Delete (disabled)</button>
                         </div>
                     </div>
                 </div>
@@ -735,10 +1063,11 @@ alertBox("Alert title", "Alert content", `
                     <div class="code"></div>
                     <div class="demo">
                         <div class="horizontal-menu">
-                            <button class="ripple-effect button-active">Section 1</button>
-                            <button class="ripple-effect">Section 2</button>
-                            <button class="ripple-effect">Section 3</button>
-                            <button class="ripple-effect align-right">Section 4</button>
+                            <button class="primary ripple-effect button-active">Section 1</button>
+                            <button class="secondary ripple-effect">Section 2</button>
+                            <button class="success ripple-effect">Section 3</button>
+                            <button class="warning ripple-effect align-right">Section 4</button>
+                            <button class="danger ripple-effect">Section 5</button>
                         </div>
                     </div>
                 </div>
@@ -748,7 +1077,7 @@ alertBox("Alert title", "Alert content", `
                 <div class="code-demo">
                     <div class="code"></div>
                     <div class="demo">
-                        <button class="btn btn-primary ripple-effect" onclick="testDiagram();">Create</button>
+                        <button class="btn btn-sp primary ripple-effect" onclick="testDiagram();">Create</button>
                         <div id="diagram"></div>
 
                         <script>

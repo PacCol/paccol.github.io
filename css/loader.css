@@ -48,7 +48,8 @@
 .loader-shadow .path {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
-    stroke: var(--blue);
+    stroke: var(--color);
+    transition: stroke 0.4s;
     animation: dash 1.5s ease-in-out infinite;
     stroke-linecap: round;
 }

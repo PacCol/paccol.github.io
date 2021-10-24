@@ -16,6 +16,18 @@
     <script src="../jquery.min.js "></script>
 
     <style>
+        @media (max-width: 860px) {
+            .search-bar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar .btn {
+                display: none;
+            }
+        }
+
         .menu {
             flex-basis: 254px;
             width: 254px;
@@ -33,6 +45,56 @@
             <h3>App title</h3>
         </div>
 
+        <div id="search-bar" class="search-bar">
+            <div class="search-field">
+                <i class="material-icons-round">search</i>
+                <input type="text" placeholder="Search something...">
+                <i class="material-icons-round">expand_more</i>
+            </div>
+            <div id="search-list" class="search-list">
+                <hr class="divider">
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $("#search-bar input").keyup(function() {
+                    let val = $("#search-bar input").val();
+                    if (val == "") {
+                        $("#search-list").hide();
+                        return;
+                    }
+
+                    var results = ["result 1", "result 2"];
+
+                    $("#search-list a").remove();
+
+                    if (results.length != 0) {
+                        $("#search-list").show();
+
+                        for (var i = 0; i < results.length; i++) {
+                            $("#search-list").append(`
+                                <a href="#">${results[i]}</a>
+                            `);
+                        }
+
+                    } else {
+                        $("#search-list").hide();
+                    }
+
+                });
+            });
+        </script>
+
+        <button class="btn btn-sp primary ripple-effect">Action</button>
+
+        <i class="material-icons-round">settings</i>
+
+        <div class="icon-group">
+            <i class="material-icons-round">help</i>
+            <p class="profile-button ripple-effect">U</p>
+        </div>
+
     </div>
 
     <div class="main-container">
@@ -44,7 +106,7 @@
                 <i class="material-icons-round close-menu">close</i>
             </div>
 
-            <div class="menu-button primary ripple-effect">
+            <div class="menu-button menu-button-active primary ripple-effect">
                 <i class="material-icons-round">play_arrow</i>
                 <p>Start</p>
             </div>
@@ -72,13 +134,54 @@
             <hr class="divider">
 
             <div class="menu-button">
+                <i class="material-icons-round">info</i>
+                <p>Status</p>
+                <div class="indicator primary"></div>
+            </div>
+
+            <div class="menu-button">
+                <i class="material-icons-round">info</i>
+                <p>Status</p>
+                <div class="indicator secondary"></div>
+            </div>
+
+            <div class="menu-button">
+                <i class="material-icons-round">info</i>
+                <p>Status</p>
+                <div class="indicator success"></div>
+            </div>
+
+            <div class="menu-button">
+                <i class="material-icons-round">info</i>
+                <p>Status</p>
+                <div class="indicator warning"></div>
+            </div>
+
+            <div class="menu-button">
+                <i class="material-icons-round">info</i>
+                <p>Status</p>
+                <div class="indicator danger"></div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="menu-button">
                 <i class="material-icons-round">dark_mode</i>
                 <p>Dark mode</p>
-                <label class="toggle-switch dark-theme-toggle-switch">
+                <label class="toggle-switch primary dark-theme-toggle-switch">
                     <input type="checkbox">
                     <span class="slider"></span>
                 </label>
             </div>
+
+            <script>
+                $(".menu-button").click(function () {
+                    if ($(this).hasClass("ripple-effect")) {
+                        $(".menu-button").removeClass("menu-button-active");
+                        $(this).addClass("menu-button-active");
+                    }
+                });
+            </script>
         </div>
 
         <div class="app"></div>
@@ -86,15 +189,6 @@
     </div>
 
     <script src="../all.min.js "></script>
-
-    <script>
-        $(".menu-button").click(function() {
-            if ($(this).hasClass("ripple-effect")) {
-                $(".menu-button").removeClass("menu-button-active");
-                $(this).addClass("menu-button-active");
-            }
-        });
-    </script>
 
 </body>
 

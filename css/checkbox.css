@@ -49,7 +49,7 @@
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background-color: var(--blue);
+    background-color: var(--color);
     display: block;
     transform: scale(0);
     opacity: 1;
@@ -61,7 +61,7 @@
 }
 
 .checkbox-box:hover span:first-child {
-    border-color: var(--blue);
+    border-color: var(--color);
 }
 
 .checkbox-input {
@@ -69,8 +69,8 @@
 }
 
 .checkbox-input:checked+.checkbox-box span:first-child {
-    background-color: var(--blue);
-    border-color: var(--blue);
+    background-color: var(--color);
+    border-color: var(--color);
     animation: wave 0.4s ease;
 }
 

@@ -20,7 +20,7 @@
 }
 
 .toggle-switch input:checked+.slider {
-    background-color: var(--blue);
+    background-color: var(--color);
 }
 
 .toggle-switch .slider:before {

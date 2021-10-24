@@ -126,14 +126,7 @@
     margin: 3px 5px 3px 30px;
     border: 1px solid var(--border-color);
     border-radius: 50%;
-}
-
-.indicator-success {
-    background-color: var(--success);
-}
-
-.indicator-danger {
-    background-color: var(--danger);
+    background-color: var(--color);
 }
 
 .menu .toggle-switch {

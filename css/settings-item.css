@@ -9,7 +9,7 @@
 }
 
 .settings-item .ripple {
-    background-color: var(--blue);
+    background-color: var(--color);
     opacity: 0.5;
 }
 

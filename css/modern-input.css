@@ -34,7 +34,7 @@ input:-webkit-autofill {
 
 .modern-input input:focus {
     padding: 14px;
-    border: 2px solid var(--blue);
+    border: 2px solid var(--color);
 }
 
 .modern-input p {
@@ -54,7 +54,7 @@ input:-webkit-autofill {
 .modern-input input:focus~p {
     transform: translateY(-73px);
     font-size: 14px;
-    color: var(--blue);
+    color: var(--color);
 }
 
 .modern-input input:not(:placeholder-shown)~p {

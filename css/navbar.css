@@ -24,15 +24,21 @@
     }
 }
 
-.navbar .material-icons-round {
+.nav-title .material-icons-round,
+.navbar > i,
+.navbar .icon-group i {
     line-height: 42px;
     width: 42px;
     text-align: center;
     margin: 0px 14px;
-    font-size: 28px;
+    font-size: 29px;
     color: var(--text-muted-color);
     border-radius: 50%;
     transition: 0.15s;
+}
+
+.icon-group {
+    display: inline-block;
 }
 
 @media not all and (pointer: coarse) {
@@ -57,7 +63,12 @@
     margin: 10px 18px;
 }
 
+.navbar .btn {
+    margin: 0px;
+}
+
 .profile-button {
+    display: inline-grid;
     margin: 0px;
     text-align: center;
     color: var(--main-background-color);

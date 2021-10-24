@@ -9,8 +9,8 @@
 
 .progress {
     height: 20px;
-    transition: width 0.8s;
-    background-color: var(--blue);
+    transition: width 0.5s;
+    background-color: var(--color);
     border-radius: 6px;
     width: 0%;
 }

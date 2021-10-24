@@ -40,16 +40,16 @@
 }
 
 .horizontal-menu .ripple {
-    background-color: var(--blue);
+    background-color: var(--color);
     opacity: 0.7;
 }
 
 .horizontal-menu .button-active {
-    color: var(--blue);
+    color: var(--color);
 }
 
 .horizontal-menu .button-active:after {
-    background-color: var(--blue);
+    background-color: var(--color);
 }
 
 .horizontal-menu .align-right {

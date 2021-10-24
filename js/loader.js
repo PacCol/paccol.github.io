@@ -1,11 +1,11 @@
 var loaderDelay = 600;
 var loaderRequested = 0;
 
-function loader(show) {
+function loader(show, color) {
 
     if ($(".loader-shadow").length == 0) {
         $("body").append(`
-            <div class="loader-shadow">
+            <div class="loader-shadow primary">
                 <div class="loader-container">
                     <div class="loader">
                         <svg class="circular" viewBox="25 25 50 50">
@@ -18,6 +18,10 @@ function loader(show) {
     }
 
     if (show) {
+
+        if (color !== undefined) {
+            $(".loader-shadow").attr("class", "loader-shadow " + color);
+        }
 
         loaderRequested = true;
 

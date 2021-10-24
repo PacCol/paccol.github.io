@@ -49,14 +49,6 @@ button {
     -webkit-tap-highlight-color: transparent;
 }
 
-.success {
-    color: var(--success);
-}
-
-.warning {
-    color: var(--warning);
-}
-
-.danger {
-    color: var(--danger);
+.set-color {
+    color: var(--color);
 }
