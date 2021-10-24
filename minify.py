@@ -1,7 +1,7 @@
 import os
 import requests
 
-os.chdir(os.getcwd())
+os.chdir(os.path.dirname(__file__))
 
 print("\n======= CSS files =======")
 
