@@ -41,6 +41,6 @@
     opacity: 0.4;
 }
 
-.context-menu .item i {
+.context-menu .item .material-icons-round {
     width: 32px;
 }
