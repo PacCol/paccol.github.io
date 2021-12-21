@@ -3,8 +3,8 @@ if (localStorage.getItem("theme") == "dark-theme") {
     $(".dark-theme-toggle-switch input").prop("checked", true);
 }
 
-$(".dark-theme-toggle-switch input").change(function() {
-    if (this.checked) {
+function enableDarkTheme(enable) {
+    if (enable) {
         localStorage.setItem("theme", "dark-theme");
         $(".dark-theme-toggle-switch input").prop("checked", true);
         $("body").addClass("during-transition");
@@ -12,7 +12,8 @@ $(".dark-theme-toggle-switch input").change(function() {
         setTimeout(function() {
             $("body").removeClass("during-transition");
         }, 200);
-    } else {
+    }
+    else {
         localStorage.setItem("theme", "light-theme");
         $(".dark-theme-toggle-switch input").prop("checked", false);
         $("body").addClass("during-transition");
@@ -20,5 +21,13 @@ $(".dark-theme-toggle-switch input").change(function() {
         setTimeout(function() {
             $("body").removeClass("during-transition");
         }, 200);
+    }
+}
+
+$(".dark-theme-toggle-switch input").change(function() {
+    if (this.checked) {
+        enableDarkTheme(true);
+    } else {
+        enableDarkTheme(false);
     }
 });
