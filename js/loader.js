@@ -1,5 +1,4 @@
-var loaderDelay = 600;
-var loaderRequested = 0;
+var loaderDelay = 800;
 
 function loader(show, color) {
 
@@ -25,13 +24,19 @@ function loader(show, color) {
 
         loaderRequested = true;
 
+        //console.log("WAITING " + loaderDelay.toString());
+
         setTimeout(function() {
 
             if (loaderRequested) {
                 $(".loader-shadow").fadeIn(150);
+                //console.log("LOADER SHOW");
+            } else {
+                //console.log("NOT ENOUGH TIME TO SHOW LOADER");
             }
         }, loaderDelay);
     } else {
+        //console.log("ABORTED")
         loaderRequested = false;
         setTimeout(function() {
             $(".loader-shadow").fadeOut(150);

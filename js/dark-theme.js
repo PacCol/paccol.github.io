@@ -1,6 +1,5 @@
 if (localStorage.getItem("theme") == "dark-theme") {
-    $("body").addClass("dark-theme");
-    $(".dark-theme-toggle-switch input").prop("checked", true);
+    enableDarkTheme(true);
 }
 
 function enableDarkTheme(enable) {
