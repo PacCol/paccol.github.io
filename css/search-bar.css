@@ -25,7 +25,7 @@
     background-color: var(--main-background-color) !important;
 }
 
-.search-bar .search-field .material-icons-round {
+.search-bar .search-field .material-icons {
     color: var(--text-muted-color);
     font-size: 20px;
     margin-left: 5px;

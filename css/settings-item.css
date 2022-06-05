@@ -24,7 +24,7 @@
     margin-right: 10px;
 }
 
-.settings-item>.material-icons-round {
+.settings-item>.material-icons {
     float: right;
     margin-top: -5px;
     margin-right: 4px;
@@ -35,7 +35,7 @@
     transition: 0.2s;
 }
 
-.settings-item>.material-icons-round:hover {
+.settings-item>.material-icons:hover {
     box-shadow: 0px 0px 0px 1px var(--border-color);
     background-color: var(--border-color);
 }

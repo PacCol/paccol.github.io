@@ -29,7 +29,7 @@ body {
     transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s !important;
 }
 
-.material-icons-round {
+.material-icons {
     vertical-align: bottom;
     font-size: 1.25em;
     font-style: normal;
@@ -38,7 +38,7 @@ body {
     font-weight: normal;
 }
 
-button .material-icons-round {
+button .material-icons {
     line-height: 0.6em;
     vertical-align: middle;
 }

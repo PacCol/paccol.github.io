@@ -3,7 +3,7 @@ function createDiagram(diagram, names, colors, values) {
 
     if (names.length == 0) {
         $(diagram).removeClass("diagram-container");
-        $(diagram).append('<i class="material-icons-round">visibility_off</i>');
+        $(diagram).append('<i class="material-icons">visibility_off</i>');
         return;
     }
 

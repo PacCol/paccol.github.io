@@ -21,13 +21,13 @@
                 display: none;
             }
         }
-
+        
         @media (max-width: 600px) {
             .navbar .btn {
                 display: none;
             }
         }
-
+        
         .menu {
             flex-basis: 254px;
             width: 254px;
@@ -41,15 +41,15 @@
     <div class="navbar">
 
         <div class="nav-title">
-            <i class="material-icons-round open-menu">menu</i>
+            <i class="material-icons open-menu">menu</i>
             <h3>App title</h3>
         </div>
 
         <div id="search-bar" class="search-bar">
             <div class="search-field">
-                <i class="material-icons-round">search</i>
+                <i class="material-icons">search</i>
                 <input type="text" placeholder="Search something...">
-                <i class="material-icons-round">expand_more</i>
+                <i class="material-icons">expand_more</i>
             </div>
             <div id="search-list" class="search-list">
                 <hr class="divider">
@@ -88,10 +88,10 @@
 
         <button class="btn btn-sp primary ripple-effect">Action</button>
 
-        <i class="material-icons-round">settings</i>
+        <i class="material-icons">settings</i>
 
         <div class="icon-group">
-            <i class="material-icons-round">help</i>
+            <i class="material-icons">help</i>
             <p class="profile-button ripple-effect">U</p>
         </div>
 
@@ -103,62 +103,62 @@
 
             <div class="menu-title">
                 <h3>App title</h3>
-                <i class="material-icons-round close-menu">close</i>
+                <i class="material-icons close-menu">close</i>
             </div>
 
             <div class="menu-button menu-button-active primary ripple-effect">
-                <i class="material-icons-round">play_arrow</i>
+                <i class="material-icons">play_arrow</i>
                 <p>Start</p>
             </div>
 
             <div class="menu-button secondary ripple-effect">
-                <i class="material-icons-round">home</i>
+                <i class="material-icons">home</i>
                 <p>Home</p>
             </div>
 
             <div class="menu-button success ripple-effect">
-                <i class="material-icons-round">crop_original</i>
+                <i class="material-icons">crop_original</i>
                 <p>Photos</p>
             </div>
 
             <div class="menu-button warning ripple-effect">
-                <i class="material-icons-round">chat</i>
+                <i class="material-icons">chat</i>
                 <p>Messages</p>
             </div>
 
             <div class="menu-button danger ripple-effect">
-                <i class="material-icons-round">language</i>
+                <i class="material-icons">language</i>
                 <p>Web</p>
             </div>
 
             <hr class="divider">
 
             <div class="menu-button">
-                <i class="material-icons-round">info</i>
+                <i class="material-icons">info</i>
                 <p>Status</p>
                 <div class="indicator primary"></div>
             </div>
 
             <div class="menu-button">
-                <i class="material-icons-round">info</i>
+                <i class="material-icons">info</i>
                 <p>Status</p>
                 <div class="indicator secondary"></div>
             </div>
 
             <div class="menu-button">
-                <i class="material-icons-round">info</i>
+                <i class="material-icons">info</i>
                 <p>Status</p>
                 <div class="indicator success"></div>
             </div>
 
             <div class="menu-button">
-                <i class="material-icons-round">info</i>
+                <i class="material-icons">info</i>
                 <p>Status</p>
                 <div class="indicator warning"></div>
             </div>
 
             <div class="menu-button">
-                <i class="material-icons-round">info</i>
+                <i class="material-icons">info</i>
                 <p>Status</p>
                 <div class="indicator danger"></div>
             </div>
@@ -166,7 +166,7 @@
             <hr class="divider">
 
             <div class="menu-button">
-                <i class="material-icons-round">dark_mode</i>
+                <i class="material-icons">dark_mode</i>
                 <p>Dark mode</p>
                 <label class="toggle-switch primary dark-theme-toggle-switch">
                     <input type="checkbox">
@@ -175,7 +175,7 @@
             </div>
 
             <script>
-                $(".menu-button").click(function () {
+                $(".menu-button").click(function() {
                     if ($(this).hasClass("ripple-effect")) {
                         $(".menu-button").removeClass("menu-button-active");
                         $(this).addClass("menu-button-active");

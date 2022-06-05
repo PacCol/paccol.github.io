@@ -36,7 +36,7 @@ function loader(show, color) {
             }
         }, loaderDelay);
     } else {
-        //console.log("ABORTED")
+        //console.log("ABORTED");
         loaderRequested = false;
         setTimeout(function() {
             $(".loader-shadow").fadeOut(150);

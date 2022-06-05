@@ -12,7 +12,7 @@ print("- Reading files: ", end="")
 
 while i < len(cssFiles):
     f = open("css/" + cssFiles[i], "r")
-    cssData = cssData + f.read()
+    cssData = cssData + " " + f.read()
     i += 1
 
 print("Complete!")
@@ -38,7 +38,7 @@ print("- Reading files: ", end="")
 
 while i < len(jsFiles):
     f = open("js/" + jsFiles[i], "r")
-    jsData = jsData + f.read()
+    jsData = jsData + " " + f.read()
     i += 1
 
 print("Complete!")
@@ -50,5 +50,5 @@ response = requests.post(url, data=data)
 print("Complete!\n")
 
 f = open("all.min.js", "w")
-f.write(response.text)
+f.write(jsData)
 f.close()

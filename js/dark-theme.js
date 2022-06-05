@@ -1,4 +1,9 @@
-if (localStorage.getItem("theme") == "dark-theme") {
+/*if (localStorage.getItem("auto-theme") == "enabled") {
+    var darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    if (darkTheme.matches) {
+        enableDarkTheme();
+    }
+} else if (localStorage.getItem("theme") == "dark-theme") {
     enableDarkTheme(true);
 }
 
@@ -11,8 +16,7 @@ function enableDarkTheme(enable) {
         setTimeout(function() {
             $("body").removeClass("during-transition");
         }, 200);
-    }
-    else {
+    } else {
         localStorage.setItem("theme", "light-theme");
         $(".dark-theme-toggle-switch input").prop("checked", false);
         $("body").addClass("during-transition");
@@ -30,3 +34,13 @@ $(".dark-theme-toggle-switch input").change(function() {
         enableDarkTheme(false);
     }
 });
+
+$(".match-system-theme-button").click(function() {
+    console.log("GGGGG");
+    var darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    if (darkTheme.matches) {
+        console.log("DARK THEME");
+        enableDarkTheme();
+    }
+    localStorage.setItem("auto-theme", "enabled");
+});*/
