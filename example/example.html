@@ -136,7 +136,7 @@
     -> index.html
                 </code></pre>
 
-                <p>After that, just add the css and js core to your page. We also add Montserrat and Material icons.</p>
+                <p>After that, just add the css and js core to your page. We also add Montserrat, Material icons and Jquery.</p>
 
                 <pre><code class="language-html">
 &#60;!DOCTYPE html&#62;
@@ -426,8 +426,7 @@
                 <div class="control">
                     <h1>Colors</h1>
                 </div>
-                <p>For each container, the <strong>background</strong> color is the writed color. (not the text color)
-                </p>
+                <p>For each container, we can see the color.</p>
                 <p>If you want to set a color, use these colors as they will adapt to dark mode.</p>
 
                 <div class="code-demo">
@@ -742,8 +741,25 @@
                     <div class="code"></div>
                     <div class="demo">
                         <div class="settings-item">
-                            <p>Example text</p>
+                            <p>Dark theme</p>
                             <label class="toggle-switch primary dark-theme-toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Toggle switch to enable the automatic dark theme</h3>
+
+                <p>This feature can be useful if you want to turn on the dark theme when your device's dark theme is on.</p>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="settings-item">
+                            <p>System default dark theme</p>
+                            <label class="toggle-switch primary auto-dark-theme-toggle-switch">
                                 <input type="checkbox">
                                 <span class="slider"></span>
                             </label>

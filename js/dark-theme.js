@@ -1,10 +1,24 @@
-/*if (localStorage.getItem("auto-theme") == "enabled") {
-    var darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-    if (darkTheme.matches) {
-        enableDarkTheme();
+applyTheme();
+
+function applyTheme() {
+    if (localStorage.getItem("auto-theme") == "enabled") {
+        $(".settings-item:has(.dark-theme-toggle-switch)").addClass("disabled");
+        $(".auto-dark-theme-toggle-switch input").prop("checked", true);
+        var darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+        if (darkTheme.matches) {
+            enableDarkTheme(true);
+        } else {
+            enableDarkTheme(false);
+        }
+    } else {
+        $(".settings-item:has(.dark-theme-toggle-switch)").removeClass("disabled");
+        $(".auto-dark-theme-toggle-switch input").prop("checked", false);
+        if (localStorage.getItem("theme") == "dark-theme") {
+            enableDarkTheme(true);
+        } else {
+            enableDarkTheme(false);
+        }
     }
-} else if (localStorage.getItem("theme") == "dark-theme") {
-    enableDarkTheme(true);
 }
 
 function enableDarkTheme(enable) {
@@ -27,6 +41,15 @@ function enableDarkTheme(enable) {
     }
 }
 
+function enableAutoDarkTheme(enable) {
+    if (enable) {
+        localStorage.setItem("auto-theme", "enabled");
+    } else {
+        localStorage.setItem("auto-theme", "disabled");
+    }
+    applyTheme();
+}
+
 $(".dark-theme-toggle-switch input").change(function() {
     if (this.checked) {
         enableDarkTheme(true);
@@ -35,12 +58,10 @@ $(".dark-theme-toggle-switch input").change(function() {
     }
 });
 
-$(".match-system-theme-button").click(function() {
-    console.log("GGGGG");
-    var darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-    if (darkTheme.matches) {
-        console.log("DARK THEME");
-        enableDarkTheme();
+$(".auto-dark-theme-toggle-switch input").change(function() {
+    if (this.checked) {
+        enableAutoDarkTheme(true);
+    } else {
+        enableAutoDarkTheme(false);
     }
-    localStorage.setItem("auto-theme", "enabled");
-});*/
+});

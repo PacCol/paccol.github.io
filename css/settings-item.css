@@ -8,6 +8,11 @@
     transition: transform 0.2s;
 }
 
+.settings-item.disabled {
+    pointer-events: none;
+    opacity: 0.45;
+}
+
 .settings-item .ripple {
     background-color: var(--color);
     opacity: 0.5;

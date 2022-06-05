@@ -9,6 +9,8 @@ $(".settings-item").click(function() {
     }
 });
 
-$(".settings-item .toggle-switch").click(function(e) {
+$(`.settings-item .toggle-switch,
+   .settings-item .btn,
+   .settings-item .material-icons`).click(function(e) {
     e.stopPropagation();
 });

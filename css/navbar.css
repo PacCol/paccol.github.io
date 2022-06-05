@@ -26,7 +26,7 @@
 
 .nav-title .material-icons,
 .navbar>.material-icons,
-.navbar .icon-group .material-icons {
+.navbar .icon-group>.material-icons {
     line-height: 42px;
     width: 42px;
     text-align: center;
@@ -42,13 +42,17 @@
 }
 
 @media not all and (pointer: coarse) {
-    .navbar .material-icons:hover {
+    .nav-title .material-icons:hover,
+    .navbar>.material-icons:hover,
+    .navbar .icon-group>.material-icons:hover {
         background-color: var(--gray-1);
         box-shadow: 0px 0px 0px 2px var(--gray-1);
     }
 }
 
-.navbar>.material-icons:active {
+.nav-title .material-icons:active,
+.navbar>.material-icons:active,
+.navbar .icon-group>.material-icons:active {
     transform: scale(0.8);
 }
 
