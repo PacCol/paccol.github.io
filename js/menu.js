@@ -5,13 +5,9 @@ if ($(document).innerWidth() < 700) {
 }
 
 $(window).on("resize", function() {
-    /*if ($(".menu").is(":visible")) {
-        if (!mobile) {
-            closeMenu();
-        }
-    }*/
     if ($(document).innerWidth() < 700) {
         mobile = true;
+        $(".menu").removeClass("icons-only");
     } else {
         mobile = false;
     }
@@ -30,6 +26,14 @@ function openMenu() {
     }
 }
 
+function iconsOnly() {
+    if (mobile) {
+        closeMenu();
+    } else {
+        $(".menu").addClass("icons-only");
+    }
+}
+
 function closeMenu() {
     if (mobile) {
         $(".menu").addClass("closed");
@@ -40,7 +44,9 @@ function closeMenu() {
         $(".menu").addClass("closed");
         $(".app").fadeOut(250).promise().done(function() {
             $(".menu").hide();
-            $(".app").fadeIn(250);
+            $(".app").fadeIn(250).promise().done(function() {
+                $(".menu").removeClass("icons-only");
+            });
         });
     }
 }
@@ -51,10 +57,14 @@ if (mobile) {
 }
 
 $(".nav-title .open-menu").click(function() {
-    if (!$(".menu").is(":visible")) {
-        openMenu();
-    } else {
+    if ($(".menu").is(":visible") && $(".menu").hasClass("icons-only-available") && !$(".menu").hasClass("icons-only")) {
+        iconsOnly();
+    } else if ($(".menu").is(":visible") && $(".menu").hasClass("icons-only")) {
         closeMenu();
+    } else if ($(".menu").is(":visible") && !$(".menu").hasClass("icons-only-available")) {
+        closeMenu();
+    } else {
+        openMenu();
     }
 });
 
@@ -82,4 +92,19 @@ $(document).mouseup(function(e) {
             }
         }
     }
+});
+
+$(".menu-button .toggle-switch").click(function(e) {
+    e.stopPropagation();
+});
+
+$(".menu-button:has(.toggle-switch)").click(function(e) {
+    var toggleSwitch = $(this).find(".toggle-switch input");
+    console.log(toggleSwitch);
+    if (toggleSwitch.prop("checked")) {
+        toggleSwitch.prop("checked", false);
+    } else {
+        toggleSwitch.prop("checked", true);
+    }
+    toggleSwitch.change();
 });

@@ -1,5 +1,7 @@
 $(document).on("click", ".ripple-effect", function(e) {
-    
+
+    console.log("GGGGG");
+
     var button = e.currentTarget;
 
     var circle = document.createElement("span");

@@ -3,12 +3,12 @@
     height: 8px;
 }
 
- ::-webkit-scrollbar-track-piece {
+::-webkit-scrollbar-track-piece {
     border-radius: 4px;
     background-color: transparent;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--overflow-color);
     border-radius: 4px;
 }
