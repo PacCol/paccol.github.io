@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="../fonts/montserrat/montserrat.css">
 
-    <link rel="stylesheet" href="../all.min.css">
+    <link rel="stylesheet" href="../all.css">
 
     <link rel="stylesheet" href="css/app.css">
 
@@ -100,6 +100,11 @@
             <div class="menu-button primary ripple-effect" id="table-button">
                 <i class="material-icons">table_view</i>
                 <p>Table</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="accordion-button">
+                <i class="material-icons">unfold_more</i>
+                <p>Accordion</p>
             </div>
 
             <div class="menu-button primary ripple-effect" id="other-button">
@@ -1023,7 +1028,7 @@
                     <h1>Table</h1>
                 </div>
 
-                <h3>Simple table</h3>
+                <h3>Simple table.</h3>
 
                 <div class="code-demo">
                     <div class="code"></div>
@@ -1060,6 +1065,58 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="accordion">
+                <div class="control">
+                    <h1>Accordion</h1>
+                </div>
+
+                <h3>An accordion to show more or less content.</h3>
+
+                <div class="code-demo">
+                    <div class="code"></div>
+                    <div class="demo">
+                        <div class="accordion">
+                            <button class="accordion-tab ripple-effect primary">Section 1</button>
+                            <div class="panel">
+                                <p>Some text...</p>
+                            </div>
+                            <button class="accordion-tab ripple-effect secondary">Section 2</button>
+                            <div class="panel">
+                                <p>Some text...</p>
+                            </div>
+                            <button class="accordion-tab ripple-effect success">Section 3</button>
+                            <div class="panel">
+                                <p>Some text...</p>
+                            </div>
+                            <button class="accordion-tab ripple-effect warning">Section 4</button>
+                            <div class="panel">
+                                <p>Some text...</p>
+                            </div>
+                            <button class="accordion-tab ripple-effect danger">Section 5</button>
+                            <div class="panel">
+                                <p>Some text...</p>
+                            </div>
+                        </div>
+                        <script>
+                            var acc = document.getElementsByClassName("accordion-tab");
+                            var i;
+
+                            for (i = 0; i < acc.length; i++) {
+                                acc[i].addEventListener("click", function() {
+                                    this.classList.toggle("active");
+                                    var panel = this.nextElementSibling;
+                                    if (panel.style.maxHeight) {
+                                        panel.style.maxHeight = null;
+                                    } else {
+                                        panel.style.maxHeight = panel.scrollHeight + "px";
+                                    }
+                                });
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
@@ -1112,7 +1169,7 @@
 
                         <script>
                             function testDiagram() {
-                                var names = ["Foo", "Bar", "Foo"];
+                                var names = ["Element 1", "Element 2", "Element 3"];
                                 var colors = ["success", "warning", "danger"];
                                 var values = [50, 25, 25];
                                 createDiagram("#diagram", names, colors, values);
