@@ -1,0 +1,54 @@
+.accordion {
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.accordion-tab {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    background-color: var(--gray-1);
+    color: var(--main-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.accordion-tab:hover {
+    background-color: var(--gray-2);
+}
+
+.accordion-tab.active {
+    color: var(--color);
+    background-color: var(--light-bg-color);
+}
+
+.accordion-tab::after {
+    content: "expand_more";
+    font-family: "Material Icons";
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.accordion-tab.active::after {
+    transform: rotateZ(-180deg);
+}
+
+.accordion-tab .ripple {
+    background-color: var(--color);
+}
+
+.accordion .panel {
+    padding: 0 18px;
+    background-color: var(--main-background-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
