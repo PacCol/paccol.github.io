@@ -43,6 +43,11 @@ button .material-icons {
     vertical-align: middle;
 }
 
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
 a,
 label,
 button {
