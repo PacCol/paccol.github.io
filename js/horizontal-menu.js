@@ -14,7 +14,8 @@ $(document).ready(function() {
             displayHorizontalMenu($(this));
         });
     });
-    $(".horizontal-menu.animated").on("fadein", function() {
+    // ERROR
+    $(".horizontal-menu.animated").on("show", function() {
         setTimeout(function() {
             displayHorizontalMenu($(this));
         }, 20);
