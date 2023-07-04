@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <title>RealCSS Example</title>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="../fonts/material-design-icons/material-design-icons-round.css">
+
+    <link rel="stylesheet" href="../fonts/montserrat/montserrat.css">
+
+    <link rel="stylesheet" href="../all.min.css">
+
+    <script src="../jquery.min.js "></script>
+
+    <style>
+        @media (max-width: 860px) {
+            .search-bar {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .navbar .btn {
+                display: none;
+            }
+        }
+        
+        .menu {
+            flex-basis: 254px;
+            width: 254px;
+        }
+        
+        .app>div {
+            display: none;
+        }
+        
+        .custom-flexbox {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .custom-flexbox>* {
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="nav-title">
+            <i class="material-icons open-menu">menu</i>
+            <h3>App title</h3>
+        </div>
+
+        <div id="search-bar" class="search-bar">
+            <div class="search-field">
+                <i class="material-icons">search</i>
+                <input type="text" placeholder="Search something...">
+                <i class="material-icons">expand_more</i>
+            </div>
+            <div id="search-list" class="search-list">
+                <hr class="divider">
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $("#search-bar input").keyup(function() {
+                    let val = $("#search-bar input").val();
+                    if (val == "") {
+                        $("#search-list").hide();
+                        return;
+                    }
+
+                    var results = ["result 1", "result 2"];
+
+                    $("#search-list a").remove();
+
+                    if (results.length != 0) {
+                        $("#search-list").show();
+
+                        for (var i = 0; i < results.length; i++) {
+                            $("#search-list").append(`
+                                <a href="#">${results[i]}</a>
+                            `);
+                        }
+
+                    } else {
+                        $("#search-list").hide();
+                    }
+
+                });
+            });
+        </script>
+
+        <button class="btn btn-sp primary ripple-effect">Action</button>
+
+        <i class="material-icons">settings</i>
+
+        <div class="icon-group">
+            <i class="material-icons">help</i>
+            <p class="profile-button ripple-effect">U</p>
+        </div>
+
+    </div>
+
+    <div class="main-container">
+
+        <div class="menu">
+
+            <div class="menu-title">
+                <h3>App title</h3>
+                <i class="material-icons close-menu">close</i>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="start-button">
+                <i class="material-icons">play_arrow</i>
+                <p>Start</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="buttons-button">
+                <i class="material-icons">touch_app</i>
+                <p>Buttons</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="inputs-button">
+                <i class="material-icons">keyboard</i>
+                <p>Inputs</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="loader-button">
+                <i class="material-icons">hourglass_empty</i>
+                <p>Loader</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="alert-button">
+                <i class="material-icons">campaign</i>
+                <p>Alert</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="context-menu-button">
+                <i class="material-icons">ads_click</i>
+                <p>Context menu</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="table-button">
+                <i class="material-icons">table_view</i>
+                <p>Table</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="accordion-button">
+                <i class="material-icons">unfold_more</i>
+                <p>Accordion</p>
+            </div>
+
+            <div class="menu-button primary ripple-effect" id="other-button">
+                <i class="material-icons">more_horiz</i>
+                <p>Other</p>
+            </div>
+
+            <hr class="divider">
+
+            <div class="menu-button">
+                <i class="material-icons">fit_screen</i>
+                <p>Reponsive design</p>
+                <div class="indicator success"></div>
+            </div>
+
+            <div class="menu-button">
+                <i class="material-icons">error</i>
+                <p>Error</p>
+                <div class="indicator danger"></div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="menu-button">
+                <i class="material-icons">dark_mode</i>
+                <p>Dark mode</p>
+                <label class="toggle-switch primary dark-theme-toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="app">
+
+            <div id="start">
+                <div class="control">
+                    <h1>Start</h1>
+                </div>
+                <h3>This template shows you the possibilities and what your web app could look like.</h3>
+                <a href="">
+                    <button class="btn btn-sp primary ripple-effect">Order yours now on Fiverr!</button>
+                </a>
+            </div>
+
+            <div id="buttons">
+                <div class="control">
+                    <h1>Buttons</h1>
+
+                    <div>
+                        <div class="modern-dropdown">
+                            <button class="btn btn-sp primary btn-sm ripple-effect">
+                                Page size<span class="btn-badge">15</span><span
+                                    class="material-icons">expand_more</span>
+                            </button>
+                            <div class="dropdown-content">
+                                <button class="dropdown-button btn btn-sm btn-ol primary">15</button>
+                                <button class="dropdown-button btn btn-sm btn-ol primary">30</button>
+                                <button class="dropdown-button btn btn-sm btn-ol primary">100</button>
+                                <button class="dropdown-button btn btn-sm btn-ol primary">500</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-sp primary ripple-effect">Click here!</button>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-sm btn-sp primary ripple-effect">
+                            Help <i class="material-icons">support</i>
+                        </button>
+                        <button class="btn btn-sm btn-sp primary ripple-effect">
+                            Back <i class="material-icons">undo</i>
+                        </button>
+                    </div>
+                </div>
+
+                <h3>Here there are many buttons</h3>
+                <p>In different colors and sizes..</p>
+
+                <div class="custom-flexbox">
+                    <button class="btn btn-sp primary ripple-effect">Sample button</button>
+                    <button class="btn btn-sp secondary ripple-effect">Sample button</button>
+                    <button class="btn btn-sp success ripple-effect">Sample button</button>
+                    <button class="btn btn-sp warning ripple-effect">Sample button</button>
+                    <button class="btn btn-sp danger ripple-effect">Sample button</button>
+                </div>
+                <div class="custom-flexbox">
+                    <button class="btn btn-lt primary ripple-effect">Sample button</button>
+                    <button class="btn btn-lt secondary ripple-effect">Sample button</button>
+                    <button class="btn btn-lt success ripple-effect">Sample button</button>
+                    <button class="btn btn-lt warning ripple-effect">Sample button</button>
+                    <button class="btn btn-lt danger ripple-effect">Sample button</button>
+                </div>
+                <div class="custom-flexbox">
+                    <button class="btn btn-ol primary ripple-effect">Sample button</button>
+                    <button class="btn btn-ol secondary ripple-effect">Sample button</button>
+                    <button class="btn btn-ol success ripple-effect">Sample button</button>
+                    <button class="btn btn-ol warning ripple-effect">Sample button</button>
+                    <button class="btn btn-ol danger ripple-effect">Sample button</button>
+                </div>
+                <div class="custom-flexbox">
+                    <button class="btn btn-sp primary ripple-effect">
+                        Sample button<span class="btn-badge">Some text</span>
+                    </button>
+                    <button class="btn btn-sp secondary ripple-effect">
+                        Sample button<span class="btn-badge">Some text</span>
+                    </button>
+                    <button class="btn btn-sp success ripple-effect">
+                        Sample button<span class="btn-badge">Some text</span>
+                    </button>
+                    <button class="btn btn-sp warning ripple-effect">
+                        Sample button<span class="btn-badge">Some text</span>
+                    </button>
+                    <button class="btn btn-sp danger ripple-effect">
+                        Sample button<span class="btn-badge">Some text</span>
+                    </button>
+                </div>
+                <div class="custom-flexbox">
+                    <div class="modern-dropdown">
+                        <button class="btn btn-sp primary ripple-effect">
+                            Sample dropdown<i class="material-icons">expand_more</i>
+                        </button>
+                        <div class="dropdown-content">
+                            <button class="btn btn-ol btn-sm primary ripple-effect" data-value="1">1</button>
+                            <button class="btn btn-ol btn-sm primary ripple-effect" data-value="2">2</button>
+                            <button class="btn btn-ol btn-sm primary ripple-effect" data-value="3">3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="inputs">
+                <div class="control">
+                    <h1>Inputs</h1>
+                </div>
+                <h3>Text inputs</h3>
+                <div class="custom-flexbox">
+                    <div class="modern-input primary">
+                        <input type="text" placeholder=" " autocomplete="off">
+                        <p>Enter some text</p>
+                    </div>
+                    <div class="modern-input secondary">
+                        <input type="text" placeholder=" " autocomplete="off">
+                        <p>Enter some text</p>
+                    </div>
+                    <div class="modern-input success">
+                        <input type="text" placeholder=" " autocomplete="off">
+                        <p>Enter some text</p>
+                    </div>
+                    <div class="modern-input warning">
+                        <input type="text" placeholder=" " autocomplete="off">
+                        <p>Enter some text</p>
+                    </div>
+                    <div class="modern-input danger">
+                        <input type="text" placeholder=" " autocomplete="off">
+                        <p>Enter some text</p>
+                    </div>
+                </div>
+
+                <h3>Toggle switch</h3>
+                <div class="settings-item">
+                    <p>Example text</p>
+                    <label class="toggle-switch primary">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="settings-item">
+                    <p>Example text</p>
+                    <label class="toggle-switch secondary">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="settings-item">
+                    <p>Example text</p>
+                    <label class="toggle-switch success">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="settings-item">
+                    <p>Example text</p>
+                    <label class="toggle-switch warning">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="settings-item">
+                    <p>Example text</p>
+                    <label class="toggle-switch danger">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <h3>Checkbox</h3>
+                <input class="checkbox-input" id="modern-checkbox1" type="checkbox">
+                <label class="checkbox-box primary" for="modern-checkbox1"><span>
+                        <svg viewBox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span>
+                    <p>Example text</p>
+                </label>
+
+                <input class="checkbox-input" id="modern-checkbox2" type="checkbox">
+                <label class="checkbox-box secondary" for="modern-checkbox2"><span>
+                        <svg viewBox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span>
+                    <p>Example text</p>
+                </label>
+
+                <input class="checkbox-input" id="modern-checkbox3" type="checkbox">
+                <label class="checkbox-box success" for="modern-checkbox3"><span>
+                        <svg viewBox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span>
+                    <p>Example text</p>
+                </label>
+
+                <input class="checkbox-input" id="modern-checkbox4" type="checkbox">
+                <label class="checkbox-box warning" for="modern-checkbox4"><span>
+                        <svg viewBox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span>
+                    <p>Example text</p>
+                </label>
+
+                <input class="checkbox-input" id="modern-checkbox5" type="checkbox">
+                <label class="checkbox-box danger" for="modern-checkbox5"><span>
+                        <svg viewBox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span>
+                    <p>Example text</p>
+                </label>
+            </div>
+
+            <div id="loader">
+                <div class="control">
+                    <h1>Loader</h1>
+                </div>
+
+                <h3>Loader</h3>
+                <button class="btn btn-sp primary ripple-effect" onclick="loaderDemoColor();">Loader</button>
+                <script>
+                    function loaderDemoColor() {
+                        loader(true, "primary");
+                        setTimeout(function() {
+                            loader(true, "secondary");
+                            setTimeout(function() {
+                                loader(true, "success");
+                                setTimeout(function() {
+                                    loader(true, "warning");
+                                    setTimeout(function() {
+                                        loader(true, "danger");
+                                        setTimeout(function() {
+                                            loader(false);
+                                        }, 1000);
+                                    }, 1000);
+                                }, 1000);
+                            }, 1000);
+                        }, 1600);
+                    }
+                </script>
+
+                <h3>Progress bar</h3>
+                <div class="progress-bar primary">
+                    <div class="progress"></div>
+                </div>
+                <div class="progress-bar secondary">
+                    <div class="progress"></div>
+                </div>
+                <div class="progress-bar success">
+                    <div class="progress"></div>
+                </div>
+                <div class="progress-bar warning">
+                    <div class="progress"></div>
+                </div>
+                <div class="progress-bar danger">
+                    <div class="progress"></div>
+                </div>
+                <button class="btn btn-sp primary ripple-effect" onclick="progress();">Click me!</button>
+                <script>
+                    function progress() {
+                        var percentage = Math.floor(Math.random() * 100);
+                        $(".progress").css("width", percentage + "%");
+                    }
+                </script>
+            </div>
+
+            <div id="alert">
+                <div class="control">
+                    <h1>Alert</h1>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var section = localStorage.getItem("section");
+
+        if (section !== null) {
+            showSection(section);
+        } else {
+            showSection("start");
+        }
+
+        $(".menu .menu-button").click(function() {
+            var id = $(this).attr("id");
+            if (id !== undefined) {
+                showSection(id.split("-button")[0]);
+            }
+        });
+
+        function showSection(id) {
+
+            localStorage.setItem("section", id);
+            $(".menu .menu-button").removeClass("menu-button-active");
+            $("#" + id + "-button").addClass("menu-button-active");
+            $(".app > div").fadeOut(100).promise().done(function() {
+                $("#" + id).fadeIn(100);
+            });
+        }
+    </script>
+
+    <script src="../all.min.js "></script>
+
+</body>
+
+</html>
