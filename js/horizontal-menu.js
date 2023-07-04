@@ -6,18 +6,18 @@ $(document).on("click", ".horizontal-menu:not(.animated) button", function() {
 
 // With animation
 $(document).ready(function() {
-    setTimeout(function() {
-        $(".horizontal-menu.animated").each(function() {
-            displayHorizontalMenu($(this));
-        });
-    }, 0);
+    $(".horizontal-menu.animated").each(function() {
+        displayHorizontalMenu($(this));
+    });
     $(window).on("resize", function() {
         $(".horizontal-menu.animated").each(function() {
             displayHorizontalMenu($(this));
         });
     });
-    $(".horizontal-menu.animated").on("show", function() {
-        displayHorizontalMenu($(this));
+    $(".horizontal-menu.animated").on("fadein", function() {
+        setTimeout(function() {
+            displayHorizontalMenu($(this));
+        }, 20);
     });
 });
 
