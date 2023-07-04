@@ -1,6 +1,6 @@
 $(document).on("click", ".ripple-effect", function(e) {
 
-    console.log("GGGGG");
+    //console.log("GGGGG");
 
     var button = e.currentTarget;
 
