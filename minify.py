@@ -17,7 +17,7 @@ while i < len(cssFiles):
 
 print("Complete!")
 
-url = 'https://cssminifier.com/raw'
+url = 'https://www.toptal.com/developers/cssminifier/api/raw'
 data = {'input': cssData}
 print("- Processing request: ", end="")
 response = requests.post(url, data=data)
