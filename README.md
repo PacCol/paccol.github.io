@@ -2,7 +2,8 @@
 A CSS Library (with js) to create lights user interfaces
 
 # Example
-You can see how to use this library in the example/example.html
+[Here](https://paccol.github.io/) is an example page.  
+[Docs](https://paccol.github.io/docs/example.html)
 
 # License
 This library includes:  
