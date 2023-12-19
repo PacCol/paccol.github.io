@@ -1,4 +1,6 @@
 .accordion {
+    margin-top: 30px;
+    margin-bottom: 20px;
     overflow: hidden;
     border-radius: 16px;
     border: 1px solid var(--border-color);
