@@ -66,7 +66,6 @@
                 <i class="material-icons">expand_more</i>
             </div>
             <div id="search-list" class="search-list">
-                <hr class="divider">
             </div>
         </div>
 
@@ -81,14 +80,16 @@
 
                     var results = ["result 1", "result 2"];
 
-                    $("#search-list a").remove();
+                    $("#search-list").empty();
 
                     if (results.length != 0) {
                         $("#search-list").show();
 
                         for (var i = 0; i < results.length; i++) {
                             $("#search-list").append(`
-                                <a href="#">${results[i]}</a>
+                                <div class="search-result">
+                                    <a href="#">${results[i]}</a>
+                                </div>
                             `);
                         }
 
