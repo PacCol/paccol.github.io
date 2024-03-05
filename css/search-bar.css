@@ -79,9 +79,12 @@
 
 .search-result {
     padding-left: 12px;
+    padding-right: 12px;
     padding-top: 8px;
     padding-bottom: 8px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: var(--main-color);
     border-radius: 8px;
     transition: 0.2s;
